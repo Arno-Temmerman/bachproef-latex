@@ -40,6 +40,8 @@
 \definecolor{color1}{RGB}{0,147,208} % Color of the article title and sections
 \definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
 
+\usepackage[T1]{fontenc}
+
 %----------------------------------------------------------------------
 %  VARIOUS USEFUL PACKAGES
 %----------------------------------------------------------------------
