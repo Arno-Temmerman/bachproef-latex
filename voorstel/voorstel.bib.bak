@@ -64,4 +64,13 @@
   url         = {https://www.jbs.cam.ac.uk/wp-content/uploads/2020/08/2017-09-27-ccaf-globalbchain.pdf},
 }
 
+@Report{Davidson2016,
+  author      = {Sinclair Davidson and Primavera De Filippi and Jason Potts},
+  date        = {2016-07-19},
+  institution = {RMIT University},
+  title       = {Disrupting Governance: The New Institutional Economics of Distributed Ledger Technology},
+  type        = {Paper},
+  url         = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2811995},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
