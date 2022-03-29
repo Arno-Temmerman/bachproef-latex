@@ -1,3 +1,4 @@
+% Encoding: UTF-8
 @book{Knuth1998,
  author = {Knuth, Donald E.},
  title = {The art of computer programming,  volume 3: (2nd ed.) sorting and searching},
@@ -22,16 +23,6 @@
   title = {{CTO Roundtable: Cloud Computing}},
   volume = {52},
   year = {2009}
-}
-
-@Article{Zheng2020,
-  author       = {Zibin Zheng and Shaoan Xie and Hong-Ning Dai and Weili Chen and Xiangping Chen and Jian Weng and Muhammad Imran},
-  date         = {2020-04},
-  journaltitle = {Future Generation Computer Systems},
-  title        = {An Overview on Smart Contracts: Challenges, Advances and Platforms},
-  pages        = {475-491},
-  url          = {https://arxiv.org/pdf/1912.10370.pdf},
-  volume       = {105},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

@@ -6,6 +6,12 @@
 \documentclass{bachproef-tin}
 
 \usepackage{hogent-thesis-titlepage} % Titelpagina conform aan HOGENT huisstijl
+\usepackage{svg}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+\usepackage{float}
 
 %%---------- Documenteigenschappen ---------------------------------------------
 
@@ -89,16 +95,17 @@
 % te verspreiden!
 
 \input{inleiding}
-\input{standvanzaken}
 \input{methodologie}
 
 % Voeg hier je eigen hoofdstukken toe die de ``corpus'' van je bachelorproef
 % vormen. De structuur en titels hangen af van je eigen onderzoek. Je kan bv.
 % elke fase in je onderzoek in een apart hoofdstuk bespreken.
 
-%\input{...}
-%\input{...}
-%...
+\input{blockchain}
+\input{deelvraag2}
+\input{blockchain-for-erp}
+\input{deelvraag4}
+
 
 \input{conclusie}
 
@@ -119,6 +126,7 @@ Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat 
 \input{../voorstel/voorstel-inhoud}
 
 %%---------- Andere bijlagen --------------------------------------------------
+
 % TODO: Voeg hier eventuele andere bijlagen toe
 %\input{...}
 
