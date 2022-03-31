@@ -87,7 +87,7 @@
   organization = {HOGENT},
 }
 
-@WWW{Mycryptopedia2018,
+@WWW{Mansfield2018,
   author = {Patrick Mansfield},
   date   = {2018-11-01},
   title  = {What Is SHA-256 And How Is It Related to Bitcoin?},
