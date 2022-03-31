@@ -1,5 +1,3 @@
-% Encoding: UTF-8
-
 @Article{Nofer2017,
   author       = {Michael Nofer and Peter Gomber and Oliver Hinz and Dirk Schiereck},
   date         = {2017-03-20},
@@ -71,6 +69,31 @@
   title       = {Disrupting Governance: The New Institutional Economics of Distributed Ledger Technology},
   type        = {Paper},
   url         = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2811995},
+}
+
+@Article{Anita2019,
+  author       = {N. Anita, M. Vijayalakshmi},
+  date         = {2019},
+  journaltitle = {10th International Conference on Computing, Communication and Networking Technologies (ICCCNT)},
+  title        = {Blockchain Security Attack: A Brief Survey},
+  url          = {https://ieeexplore.ieee.org/abstract/document/8944615},
+}
+
+@Article{Kietzmann2018,
+  author       = {Jan Kietzmann and Chris Archer-Brown},
+  date         = {2018},
+  journaltitle = {Business Horizons},
+  title        = {From hype to reality: Blockchain grows up},
+  issue        = {2},
+  volume       = {65},
+}
+
+@WWW{Gartner2021,
+  author = {Gartner},
+  date   = {2021},
+  editor = {Avivah Litan},
+  title  = {Hype Cycle for Blockchain 2021; More Action than Hype},
+  url    = {https://blogs.gartner.com/avivah-litan/2021/07/14/hype-cycle-for-blockchain-2021-more-action-than-hype/},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

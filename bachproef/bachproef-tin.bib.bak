@@ -1,28 +1,97 @@
-% Encoding: UTF-8
-@book{Knuth1998,
- author = {Knuth, Donald E.},
- title = {The art of computer programming,  volume 3: (2nd ed.) sorting and searching},
- year = {1998},
- publisher = {Addison Wesley Longman Publishing Co., Inc.},
- address = {Redwood City, CA, USA}
+@Article{Zheng2020,
+  author       = {Zibin Zheng and Shaoan Xie and Hong-Ning Dai and Weili Chen and Xiangping Chen and Jian Weng and Muhammad Imran},
+  date         = {2020-04},
+  journaltitle = {Future Generation Computer Systems},
+  title        = {An Overview on Smart Contracts: Challenges, Advances and Platforms},
+  pages        = {475-491},
+  url          = {https://arxiv.org/pdf/1912.10370.pdf},
+  volume       = {105},
 }
 
-@book{Pollefliet2011,
-  author = {Pollefliet, Leen},
-  title = {Schrijven van verslag tot eindwerk: do's en don'ts},
-  year = {2011},
-  publisher = {Academia Press},
-  address = {Gent}
+@Report{Chohan2021,
+  author      = {Usman W. Chohan},
+  date        = {2021-01-06},
+  institution = {SSRN},
+  title       = {The Double Spending Problem and Cryptocurrencies},
+  type        = {Discussion paper},
+  url         = {https://ssrn.com/abstract=3090174},
 }
 
-@article{Creeger2009,
-  author = {Creeger, Mache},
-  journal = {Communications of the ACM},
-  number = {8},
-  pages = {50--56},
-  title = {{CTO Roundtable: Cloud Computing}},
-  volume = {52},
-  year = {2009}
+@Report{Hoepman2008,
+  author      = {Jaap-Henk Hoepman},
+  date        = {2008-02-06},
+  institution = {Institute for Computing and Information Sciences Radboud University Nijmegen},
+  title       = {Distributed Double Spending Prevention},
+  type        = {Paper},
+  url         = {https://arxiv.org/abs/0802.0832v1},
+}
+
+@Report{Salem2008,
+  author      = {Asad Omar Salem and Maryam Tareq Abu Safeia and Safa Mousa Siam},
+  date        = {2008},
+  institution = {Arab American University},
+  title       = {Report of Blockchain Techniques and Applications},
+  type        = {Report},
+}
+
+@Report{Xu2019,
+  author      = {Min Xu and Xingtong Chen and Gang Kou},
+  date        = {2019-07-04},
+  institution = {Southwestern University of Finance and Economics},
+  title       = {A systematic review of blockchain},
+  type        = {Review},
+  url         = {https://jfin-swufe.springeropen.com/track/pdf/10.1186/s40854-019-0147-z.pdf},
+}
+
+@Article{Rawat2020,
+  author       = {Danda B. Rawat and Vijay Chaudhary and Ronald Doku},
+  date         = {2020-11-10},
+  journaltitle = {Journal of Cybersecurity and Privacy},
+  title        = {Blockchain Technology: Emerging Applications and Use Cases for Secure and Trustworthy Smart Systems},
+  url          = {https://www.mdpi.com/2624-800X/1/1/2},
+}
+
+@Report{Nakamoto2008,
+  author      = {Satoshi Nakamoto},
+  date        = {2008},
+  institution = {Bitcoin},
+  title       = {Bitcoin: A Peer-to-Peer Electronic Cash System},
+  type        = {Whitepaper},
+  url         = {https://bitcoin.org/bitcoin.pdf},
+}
+
+@WWW{Majaski2021,
+  author = {Christina Majaski},
+  date   = {2021-10-09},
+  title  = {Distributed Ledgers},
+  url    = {https://www.investopedia.com/terms/d/distributed-ledgers.asp},
+}
+
+@Article{Chaudhry2018,
+  author       = {Natalia Chaudhry and Muhammad Murtaza Yousaf},
+  date         = {2018-12-21},
+  journaltitle = {2018 12th International Conference on Open Source Systems and Technologies (ICOSST)},
+  title        = {Consensus Algorithms in Blockchain: ComparativeAnalysis, Challenges and Opportunities},
+}
+
+@Book{Bhaskar2015,
+  author = {Nirupama Devi Bhaskar and David Kuo Chuen},
+  date   = {2015},
+  title  = {Handbook of Digital Currency},
+}
+
+@Misc{Slaats2019,
+  author       = {N. Slaats and K. Van Driessche},
+  date         = {2019},
+  title        = {ProbleemOplossend Denken 1: Lesnota's},
+  organization = {HOGENT},
+}
+
+@WWW{Mycryptopedia2018,
+  author = {Patrick Mansfield},
+  date   = {2018-11-01},
+  title  = {What Is SHA-256 And How Is It Related to Bitcoin?},
+  url    = {https://www.mycryptopedia.com/sha-256-related-bitcoin/},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
