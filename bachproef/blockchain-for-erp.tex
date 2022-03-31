@@ -7,14 +7,83 @@ In dit hoofdstuk wordt de derde deelvraag van het onderzoek behandeld:
 	\textit{\textbf{``Welke mogelijkheden biedt blockchain voor een ERP-systeem?''}}
 \end{center}
 
+
+\section{Blockchain-platformen}
+
+De originele Bitcoin whitepaper inspireerde talloze spelers om een eigen versie van een blokchain te ontwikkelen. Ondertussen brachten al verschillende ondernemingen hun eigen variant op de markt. Om deze implementaties van elkaar te onderscheiden spreekt men over verschillende ``blockchain-platformen''. Elk platform biedt een basis aan ontwikkelaars om nieuwe toepassingen te bouwen op de bestaande blokchain-infrastructuur
+~\autocite{Saraf2018}.
+
+\begin{table}[H]
+	\begin{tabular}{@{}lccc@{}}
+		\cmidrule(l){2-4}
+		& \textbf{Ethereum}                                         & \textbf{Hyperledger} & \textbf{R3 Corda}                                        \\ \midrule
+		1. Type                                                                     & Openbaar                                                  & Besloten             & Besloten                                                 \\ \midrule
+		2. Consensus algoritme                                                      & Proof of Work                                             & Pluggable Framework  & Pluggable Framework                                      \\ \midrule
+		3. Toepassingsgebied                                                        & Algemeen                                                  & Algemeen             & Financiële sector                                        \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}4. Ondersteunde\\  programmeertalen\end{tabular} & \begin{tabular}[c]{@{}c@{}}Python\\ Go\\ C++\end{tabular} & Python               & \begin{tabular}[c]{@{}c@{}}C++\\ Javascript\end{tabular} \\ \bottomrule
+	\end{tabular}
+	\caption{\label{tab:blockchain-platformen}Vergelijking van drie fundamentele blockchain platformen}
+\end{table}
+
+Een eerste manier waarop platformen zich van elkaar onderscheiden is dus de machinetaal waarin ze geïmplementeerd zijn.
+Tabel~\ref{tab:blockchain-platformen} vergelijkt drie fundamentele blockchain-platformen met elkaar op nog een aantal andere vlakken.
+
+\begin{enumerate}
+	\item Een platform kan openbaar of besloten zijn. Indien men geen permissies nodig heeft om peer-to-peernetwerk te betreden, wordt het openbaar beschouwd. In het andere geval is het systeem besloten. Eens een node opgevangen is in het netwerk, kan het de blockchain in beide op een transparante manier inkijken.
+	\item Niet elk platform gebruikt de Proof of Work, zoals beschreven in sectie \ref{sub:proof-of-work} - \nameref{sub:proof-of-work}. Er zijn ook andere manieren om consensus na te streven. Het opzet blijft dus hetzelfde.
+	\item Verschillende platformen mikken op een ander toepassingsgebied.
+	\item Naast de taal waarin de blockchain geïmplementeerd is, zijn er ook programmeertalen waarmee het platform benaderd kan worden. Hiermee kunnnen ontwikkelaars toepassingen schrijven die de onderliggende blockchain kunnen benutten. 
+\end{enumerate}
+	
+Deze drie voorbeelden werden opgenomen in de tabel, omdat ze in zekere zin een basis vormen van vele andere platformen. Heel wat producenten brachten een eigen platform op de markt dat eigenlijk een afgeleide is van reeds bestaande keuze. In de literatuur wordt vaak geen onderscheid gemaakt tussen de twee~\autocite{Gartner2022}. Enkele voorbeelden van commerciële blockchainplatformen zijn:
+\begin{itemize}
+	\item Etherium
+	\item Hyperledger Fabric
+	\item Hyperledger Sawtooth
+	\item Hyperledger Iroha
+	\item IBM Blockchain
+	\item Microsoft Azure Blockchain
+	\item ...
+\end{itemize}
+
+
 \section{Smart contracts}
 Smart contracts:
-A smart contract is computer code that can 
-be embedded in a Blockchain to write, 
-verify, and negotiate a contract. Smart 
-contracts operate under a set of terms that 
-users agree to. When these conditions are 
-met, the agreement is automatically 
-executed. [10](Salem2008)
+Een smart contract is een stuk computercode dat geïmplementeerd wordt bovenop een blockchain als digitale versie van een contract. Ze maken het mogelijk om contractuele voorwaarden automatisch af te dwingen, zonder de tussenkomst van een derde partij~\autocite{Salem2008}.
 
-\section{Blockchain Platforms}
+De voorwaarden en bijhorende gevolgen van het contract, worden omgezet naar verzameling van functies en variabelen in het smart contract. Wanneer transacties in de blockchain terecht komen die een van deze voorwaarden triggert, wordt de bijhorende functie uitgevoerd. De uitvoer wordt op zijn beurt opgenomen in de blockchain als een nieuwe transactie in de blockchain~\autocite{Zheng2019}. In volgende subsecties worden de verschillende stappen in de levenscyclus van een smart contract uitgelegd. Figuur~\ref{fig:smart-contracts-overview} geeft een mooie leidraad weer.
+
+\subsection{Creatie}
+
+In een eerste fase leggen de betrokken partijen de voorwaarden van het contract vast in gewone mensentaal. Eens opgesteld, kan een software engineer de (voorwaarden van) dit contract omzetten in code. Dit is mogelijk in verschillende high-level programmeertalen, zoals Python, Java of Solidity~\autocite{Bahga2016}. Een compiler zet deze statements om naar een smart contract onder de vorm machinecode, dat klaar is om in de blockchain gezet te worden~\autocite{Zheng2019}.
+
+\textbf{Voorbeeld:}
+Partijen A en B sluiten een contract: indien een metaaldetector iets aantreft in de voedselverwerking van partij A, moet partij B hiervoor beboet worden. Een software engineer krijgt de opdracht om dit contract om te zetten in code.
+
+\subsection{Deployment}
+
+Eens een contract wordt weggeschreven naar de blockchain, kan het niet meer gewijzigd worden. Zoals al aangegeven, zijn de voorwaarden van het conract vertaald naar functies en variabelen. Indien men een nieuwe voorwaarde wenst toe te voegen aan het contract, zal men een nieuw smart contract moeten aanmaken. Dankzij de transparantie van de blockchain kunnen alle partijen het contract raadplegen~\autocite{Zheng2019}.
+
+\textbf{Voorbeeld:}
+Het smart contract tussen partij A en B wordt op de blockchain geplaatst.
+
+\subsection{Uitvoering}
+
+Tijdens de uitvoering wordt voortdurend gemonitord of er nieuwe transacties op de blockchain geplaatst worden die de voorwaarden van het contract vervullen. Wanneer een functie getriggerd word zal deze de voorgeprogrammeerde implicaties uitvoeren als een nieuwe transactie in de blockchain. Met andere woorden: het contract werd afgedwongen, zonder actieve tussenkomst van een derde partij~\autocite{Delmolino2016}.
+
+\textbf{Voorbeeld:}
+De metaaldetector van partij A merkt een onzuiverheid op in het productieproces. Deze detectie wordt onder de vorm van een transactie opgeslagen op de blockchain. Dit triggert het smart contract dat op zijn beurt een transactie op de keten plaatst om aan om deze gebeurtenis te documenteren.
+
+\subsection{Afronding}
+
+Om de levenscyclus van een smart contract af te ronden, worde de betrokken partijen op de hoogte gebracht. De status van de partijen wordt geüpdatet indien nodig~\autocite{Zheng2019}.
+
+\textbf{Voorbeeld:}
+Partijen A en B worden op de hoogte gebracht. Partij B maakt het nodige bedrag over naar partij A, wat wordt geregistreerd als een transactie op de blockchain.
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=\linewidth]{img/blockchain-for-erp/smart-contracts-overview.pdf}
+	\caption{\label{fig:smart-contracts-overview}Overzicht smart contracts~\autocite{Zheng2019}}
+\end{figure}
+

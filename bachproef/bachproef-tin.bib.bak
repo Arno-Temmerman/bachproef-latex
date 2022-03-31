@@ -1,6 +1,6 @@
-@Article{Zheng2020,
+@Article{Zheng2019,
   author       = {Zibin Zheng and Shaoan Xie and Hong-Ning Dai and Weili Chen and Xiangping Chen and Jian Weng and Muhammad Imran},
-  date         = {2020-04},
+  date         = {2019-12-22},
   journaltitle = {Future Generation Computer Systems},
   title        = {An Overview on Smart Contracts: Challenges, Advances and Platforms},
   pages        = {475-491},
@@ -92,6 +92,62 @@
   date   = {2018-11-01},
   title  = {What Is SHA-256 And How Is It Related to Bitcoin?},
   url    = {https://www.mycryptopedia.com/sha-256-related-bitcoin/},
+}
+
+@WWW{Gartner2021,
+  author = {Gartner},
+  date   = {2021},
+  editor = {Avivah Litan},
+  title  = {Hype Cycle for Blockchain 2021; More Action than Hype},
+  url    = {https://blogs.gartner.com/avivah-litan/2021/07/14/hype-cycle-for-blockchain-2021-more-action-than-hype/},
+}
+
+@Article{Anita2019,
+  author       = {N. Anita, M. Vijayalakshmi},
+  title        = {Blockchain Security Attack: A Brief Survey},
+  date         = {2019},
+  journaltitle = {10th International Conference on Computing, Communication and Networking Technologies (ICCCNT)},
+  url          = {https://ieeexplore.ieee.org/abstract/document/8944615},
+}
+
+@Article{Kietzmann2018,
+  author       = {Jan Kietzmann and Chris Archer-Brown},
+  title        = {From hype to reality: Blockchain grows up},
+  volume       = {65},
+  date         = {2018},
+  issue        = {2},
+  journaltitle = {Business Horizons},
+}
+
+@Article{Bahga2016,
+  author       = {Arshdeep Bahga and Vijay K. Madisetti},
+  date         = {2016-9},
+  journaltitle = {Arshdeep Bahga, Vijay K. Madisetti},
+  title        = {Blockchain Platform for Industrial Internet of Things},
+  doi          = {10.4236/jsea.2016.910036},
+  url          = {https://scirp.org/journal/PaperInformation.aspx?PaperID=71596},
+}
+
+@Article{Saraf2018,
+  author       = {Chinmay Saraf and Siddharth Sabadra},
+  date         = {2018-05-12},
+  journaltitle = {2018 IEEE International Conference on Innovative Research and Development (ICIRD)},
+  title        = {Blockchain Platforms: A Compendium},
+}
+
+@Report{Delmolino2016,
+  author      = {Kevin Delmolino and Mitchell Arnett and Ahmed Kosba and Andrew Miller and Elaine Shi},
+  date        = {2016},
+  institution = {Department of Computer Science, University of Maryland},
+  title       = {Step by Step Towards Creating a Safe SmartContract: Lessons and Insightsfrom a Cryptocurrency Lab},
+  type        = {Report},
+}
+
+@WWW{,
+  author = {Gartner},
+  date   = {2022},
+  title  = {Blockchain Platforms Reviews and Ratings},
+  url    = {https://www.gartner.com/reviews/market/blockchain-platforms},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
