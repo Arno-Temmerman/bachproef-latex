@@ -32,7 +32,7 @@ Double-spending is een probleem binnen de context van \textit{cryptocurrencies}.
 \subsection{Transacties}
 \label{sub:transacties}
 
-A transactie staat voor een interaction tussen partijen~\autocite{Salem2008}. In de oorspronkelijke toepassing van blockchains betekende dit de bitcoin-overdracht van een partij naar een andere~\autocite{Pierro2017}. Er zijn echter veel meer transacties denkbaar dan enkel eenvoudige gelduitwisselingen.
+Een transactie staat voor een interaction tussen partijen~\autocite{Salem2008}. In de oorspronkelijke toepassing van blockchains betekende dit de bitcoin-overdracht van een partij naar een andere~\autocite{Pierro2017}. Er zijn echter veel meer transacties denkbaar dan enkel eenvoudige gelduitwisselingen.
 In het boek ``Blockchain: Blueprint for a New Economy'' wordt blockchain-technologie opgedeeld in drie fases. De bijhorende toepassingsgebieden bepalen de transacties die denkbaar zijn om op te nemen in een blockchain~\autocite{Swan2015}.
 
 \textbf{Blockchain 1.0} is het label voor blockchain-technologie, zoals die bestond in zijn oorspronkelijke context: cryptocurrencies. Een transactie staat in die context voor
@@ -106,7 +106,7 @@ Merk op dat de probleemstelling in principe niet volledig opgelost is. De vertro
 
 \textbf{Probleem:} 
 Op vraag van partij A verwijdert het centrale figuur een voorgaande transactie tussen A en B. 
-Aangezien dit de enige kopie is van de ledger is er gaan manier voor partij B om hierop terug te komen. Parij C weet niets over het hele scenario.
+Aangezien dit de enige kopie is van de ledger is er geen manier voor partij B om hierop terug te komen. Parij C weet niets over het hele scenario.
 
 Met een gedistribueerd systeem kan men de nood aan een centrale authoriteit proberen vermijden.
 
@@ -239,7 +239,7 @@ Een laatste essentieel principe bestaat eruit om bij elk blok een extra speciaal
 \label{sub:proof-of-work}
 
 De laatste sleutel bestaat eruit om een extra stukje data toe te voegen aan elk blok genaamd de ``Proof of Work''.
-Afhankelijk van de inhoud van die Proof of Work, zal het blok uiteraard veranderen, en als gevolg ook de hash van dat blok~\autocite{Nakamoto2008}. Met andere woorden: door dit stukje data te tweakend, wijzigt men de hash die nodig is om te verwijzen naar dat blok.
+Afhankelijk van de inhoud van die Proof of Work, zal het blok uiteraard veranderen, en als gevolg ook de hash van dat blok~\autocite{Nakamoto2008}. Met andere woorden: door dit stukje data te tweaken, wijzigt men de hash die nodig is om te verwijzen naar dat blok.
 
 Het opzet is om nu een extra vereiste op te leggen aan die hashverwijzingen, zodat het tijdrovend wordt om die PoW te produceren. Nakamoto vond een dergelijke vereiste, die desondanks eenvoudig is om te verifiëren: de has moet beginnen met een voorgedefiniëerd aantal nul-bits. Een blok zal pas als geldig beschouwd worden, wanneer de eerste \textit{x} bits allemaal de waarde nul hebben. 
 
