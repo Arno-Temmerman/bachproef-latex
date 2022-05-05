@@ -46,6 +46,9 @@ Deze drie voorbeelden werden opgenomen in de tabel, omdat ze in zekere zin een b
 	\item ...
 \end{itemize}
 
+\subsection{Hard forks}
+
+Zoals reeds vermeld, kunnen blockchain-platformen de basis vormen voor nieuwe varianten. Wanneer er ingrijpende aanpassingen gemaakt worden aan het protocol van een basis-blockchain, spreekt men over een hard fork. Door uiteenlopende visies kunnen op die manier verschillende ``smaken'' van eenzelfde blockchain ontstaan. Wanneer men over de Bitcoin-blockchain spreekt, heeft men het doorgaans over de originele BTC-fork. Nochtans is dit niet de enige. Sinds het ontstaan werd er steeds verder getweakt aan de implementatie. Omdat informatici een eigen visie hadden over hoe de keten stabiel gemaakt kon worden, ontstonden ook forks zoals BSV (Blockchain Satoshi Vision). In die vertakking probeerde men zoveel mogelijk terug te keren op het oorspronkelijk protocol. Verschillende ontwerpkeuzes zorgen ervoor dat de ene fork meer schaalbaarheid of rekenkracht kan bieden dan de andere. Als gevolg zijn bepaalde forks meer of minder geschikt voor het opslaan van data in een ERP-context.
 
 \section{Smart contracts}
 
@@ -81,9 +84,53 @@ Om de levenscyclus van een smart contract af te ronden, worde de betrokken parti
 \textbf{Voorbeeld:}
 Partijen A en B worden op de hoogte gebracht. Partij B maakt het nodige bedrag over naar partij A, wat wordt geregistreerd als een transactie op de blockchain.
 
-\begin{figure}[]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{img/blockchain-for-erp/smart-contracts-overview.pdf}
 	\caption{\label{fig:smart-contracts-overview}Overzicht smart contracts~\autocite{Zheng2019}}
 \end{figure}
 
+\section{NFT's}
+
+Zoals vermeld in subsectie 3.1.2, stond een transactie oorspronkelijk voor de bitcoin-overdracht van een partij naar een andere~\autocite{Pierro2017}. Bij elke transactie worden digitale tokens uitgewisseld die door de ontvangende partij opnieuw uitgegeven kunnen worden. Op geen enkel punt is het daarbij zinvol om een onderscheid te maken tussen individuele tokens. Ze zijn namelijk onderling gelijkwaardig. Zo komt een Bitcoin wallet aan zijn saldo lauter door het aantal bitcoins waaruit die bestaat. Het is daarbij niet van belang wélke bitcoin-tokens dat specifiek zijn. In die zin zijn de tokens van Blockchain 1.0 fungibel of vervangbaar.
+
+Met de overgang naar Blockchain 2.0 wordt op dit vlak een conceptuele sprong gemaakt. Met de komst van nieuwe blockchain-platformen werd het namelijk mogelijk om meer dan enkel bitcoin-overdrachten op te slaan. De datavelden van nieuwere blockchains staan open voor allerlei data. Men kan nu ook bestanden zoals een afbeelding, factuur of tekstbestand vastleggen in een blockchain en behandelen als een token. Deze tokens kunnen nog steeds uitgewisseld worden, maar hebben nu wel een unieke waarde. Immers, de ene factuur is de andere niet. Ze zijn dus niet fungibel en krijgen daarom de naam Non-fungible token of NFT.
+
+Een diepgaande technische uiteenzetting van NFT's is niet opportuun voor deze scriptie. Aangezien deze tokens wel hun nut bewijzen in een ERP-context, is het echter wel belangrijk om een gegrond beeld te krijgen van wat ze juist zijn.
+
+\subsection{Voorbeeld}
+
+Op digitale markplaatsen zoals OpenSea kan men de inhoud en details van allerlei NFT's verkennen. Deze bevinden zich op een blockchain zoals die van Ethereum. Heel wat grafische kunstwerkjes worden op die manier ``als NFT'' te koop aangeboden. Onderstaand voorbeeld illustreert wat dat juist inhoudt.
+
+Figuur~\ref{fig:nft-example} geeft een willekeurige NFT uit de Ethereum blockchain weer, zoals die te vinden valt op digitale markplaatsen. De data die in dit geval als token op de blockchain geplaatst werd, is een PNG-afbeelding van cirkels en lijnstukken. Het is belangrijk om erop te wijzen dat dit geen afbeelding hoeft te zijn. Ook andere bestanden, zoals een XML-factuur of een mp3. In de details wordt verwezen naar het smart contract waarmee deze token gemaakt werd, alsook de ID dat eraan gegeven werd.
+
+Deze NFT werd gemaakt met behulp van een smart contract. Het adres hiervan gegeven en een unieke ID dat dit contract maakte
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{img/blockchain-for-erp/nft-example.pdf}
+	\caption{\label{fig:nft-example}NFT op een digitale marktplaats}
+\end{figure}
+
+Het smart contract adres wijst naar een plaats op de Ethereum blockchain. Een eenvoudige manier om de bijhorende data te benaderen, is met behulp van een block explorer website zoals EtherScan. Wie het adres volgt, zal het script (of smart contract) vinden dat gebruikt werd om de afbeelding, samen met allerlei metadata op de blockchain te plaatsen. Met andere woorden: het werd gebruikt om de afbeelding ``als NFT'' op de blockchain te plaatsen. Hiervoor heeft het script allerlei commando's. Nog een ander commando dient om de URI van een token op te vragen op basis van zijn ID:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{img/blockchain-for-erp/tokenURI-function.pdf}
+\end{figure}
+Met de ID van de NFT uit Figuur~\ref{fig:nft-example} als parameter, zal dit commando kunnen we de bijhorende URI retourneren.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{img/blockchain-for-erp/nft-tokenURI.pdf}
+	\caption{\label{fig:nft-tokenURI}URI van een NFT}
+\end{figure}
+
+Merk op dat de token URI in dit geval zelfs een URL is. Deze kan dus via elke webbrowser benaderd worden. Het is trouwens ook mogelijk om dit adres als QR-code voor te stellen. Door deze verwijzing te volgen, krijgt men de data van de NFT~\footnote{Voor de duidelijkheid werd een deel van de metadata uit dit voorbeeld vervangen door beletseltekens.}:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{img/blockchain-for-erp/NFT-data.pdf}
+\end{figure}
+
+De NFT bestaat uit metadata zoals \verb|tokenID|, \verb*|payout_address| en \verb|minted|. Met \verb*|image| wordt de URI-verwijzing naar de PNG-afbeelding van cirkels vastgelegd. Het geheel is wat ``de NFT van'' de afbeelding inhoudt. 
+Wat het betekent om een NFT van een bestand te minten kan dus eenvoudig beschreven worden: men plaatst -met behulp van een smart contract- een URI-verwijzing naar dat bestand, samen met metadata op de blockchain. Die data geniet vanaf dan alle voordelen van een blockchain: het is \textit{incorruptible} en kan herleid worden naar een zekere eigenaar.
