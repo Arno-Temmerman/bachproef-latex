@@ -1,0 +1,119 @@
+\chapter{CPSolution}
+\label{ch:cpsolution}
+
+ERP as is
+Aan de hand van een case study van CPSolution, 
+
+\begin{center}
+	\textit{\textbf{``Hoe wordt de data van een ERP-systeem opgeslagen?''}}
+\end{center}
+
+\section{Enterprise resource planning}
+\label{sec:enterprise-resource-planning}
+
+Enterprise resource planning (ERP) is de benaming voor software die ontwikkeld werd om een organisaties te ondersteunen bij meerdere bedrijfsprocessen. Dit gaat van processen zoals productie en logistiek tot verkoop, alsook tot boekhouding en HR. Planning-software is al langer een vaste waarde in het bedrijfsleven, maar werd oorspronkelijk enkel ingezet voor heel specifieke taken. 
+
+Zo was er in 1964 al sprake van Material Requirements Planning (MRP). Deze voorouder van ERP stond uitsluitend in voor het inschatten en plannen van productiegoederen. Gaandeweg werd het takenpakket van deze planning- en beheersystemen steeds groter. Daarnaast ontstonden er ook andere resource planning systemen voor bedrijfsprocessen zoals shipping, financiële processen, HR en project management. Om alle onderdelen van een organisatie vanuit een zelfde systeem te ondersteunen en daarbij dubbelwerk te vermijden, werd er gestreefd naar een geïntegreerd systeem: een ERP-systeem. Veelal worden processen onder de vorm van verschillende modules bij elkaar gebracht in eenzelfde pakket.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{img/erp/erp-diagram.pdf}
+	\caption{\label{fig:erp-diagram}Diagram van de taken van een ERP-systeem}
+\end{figure}
+
+
+
+\section{Totstandkoming}
+\label{sec:totstandkoming}
+In 2014 bracht 14IT het ERP-systeem CPSolution op de markt. Het programma, bestaande uit meerdere modules, is gericht op kmo's en helpt ondertussen een 25-tal klanten bij hun bedrijfsprocessen. CPSolution werd volledig in C\# geprogrammeerd en bestaat uit 36 projecten.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{img/erp/cpsolution.png}
+	\caption{\label{fig:cpsolution}Aanmeldpagina van CPSolution}
+\end{figure}
+
+CPSolution ontstond niet meteen als een compleet ERP-pakket. In een eerste fase werd het louter ontwikkeld als uitbreiding op een reeds bestaand ordersysteem. Dat gebeurde op vraag van een klant in 2011. Als kaasproducent had de klant nood aan software om orders te plannen op de productielijn. Hun ordersysteem, Unit4 Multivers, bood die functionaliteit echter niet. Daarom werd de vraag gesteld aan 14IT om een oplossing op maat te ontwikkelen. Er werd software geschreven die de orders uit Unit4 Multivers kon ophalen, om vervolgens te plannen op de productielijn. 
+
+Door alsmaar groeiende requirements werd het programma steeds uitgebreid. Zo kon het na verloop van tijd rechtstreeks gebruikt worden voor de opname van orders. Er werden modules toegevoegd om facturen en creditnota op te maken. Zo was ook de link naar een extern boekhoudsysteem niet meer nodig. Door dergelijke uitbreidingen groeide het programma meer en meer uit tot een autonoom ERP-systeem. In 2014 werd besloten om van hieruit een nieuw softwareproject op te starten onder de naam CPSolution.
+
+\section{Dataopslag}
+\label{sec:dataopslag}
+
+\subsection{Type databank}
+\label{sub:type-databank}
+
+De data van het ERP-systeem wordt opgeslagen in een relationele databank van Microsoft SQL Server. De gebruikte editie is afhankelijk van de grootte en de noden van de klant. Voor kleine bedrijven volstaat een Express-editie soms al. Voor klanten zoals Lumap, die maandelijks honderden facturen te verwerken krijgen, is een Enterprise editie aangewezen. Onderstaande tabel is een greep uit de Microsoft documentatie om een beeld te geven van deze edities.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{@{}lccc@{}}
+		\cmidrule(l){2-4}
+		Maximum ...                                                                           & \textbf{Express}                                                         & \textbf{Standard}                                                          & \textbf{Enterprise} \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}compute capacity \\ used by a single instance\end{tabular} & \begin{tabular}[c]{@{}c@{}}lesser of 1 socket \\ or 4 cores\end{tabular} & \begin{tabular}[c]{@{}c@{}}lesser of 4 sockets\\  or 24 cores\end{tabular} & OS maximum          \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}memory for buffer \\ pool per instance\end{tabular}        & 1410 MB                                                                  & 128 GB                                                                     & OS maximum          \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}memory-optimized \\ data size per database\end{tabular}    & 352 MB                                                                   & 32 GB                                                                      & unlimited           \\ \midrule
+		relational database size                                                              & 10 GB                                                                    & 524 PB                                                                     & 524 PB              \\ \bottomrule
+	\end{tabular}
+	\caption{\label{tab:sql-server-edities}Vergelijking van Microsoft SQL Server 2019 edities}
+\end{table}
+
+
+\subsection{Hosting}
+\label{sub:hosting}
+
+Naast de editie van de databank is ook de hosting van belang. Voor het ontwikkelen van CPSolution laat 14IT een databank hosten door Combell. In gebruik hebben klanten drie keuzes voor de fysieke opslag van deze databank:
+
+\begin{itemize}
+	\item \textbf{On-premises:} De databank wordt opgeslagen op een toestel in het intern netwerk van de klant. Indien nodig installeert 14IT hiervoor de nodige hardware. Deze optie vraagt dus een zekere investering van de klant, maar heeft als voordeel dat de data heel snel raadpleegbaar is.
+	\item \textbf{Combell-hosting:} Er wordt beroep gedaan op een van de databasepaketten van Combell. Aangezien de software lokaal bij de klant geïnstalleerd wordt, dient men rekening te houden met een zekere latentie.
+	\item \textbf{CPSolution on Cloud:} De databank en software worden opgeslagen op een fysiek toestel van 14IT dat instaat als server. Om de toepassing te delen met de klant bestaan twee mogelijkheden. Ofwel opteert de klant voor een published application. De klant zal lokaal een applicatie kunnen openen. Hoewel het lijkt alsof de applicatie lokaal draait, wordt er achterliggend eigenlijk een sessie op de server gestart. Enkele klanten maken gebruik van remote desktop om zo te interageren met het toestel.
+\end{itemize}
+
+\subsection{Datamodel}
+\label{sub:datamodel}
+
+De databank van CPSolution is opgebouwd volgens een relationeel model. Het model begon kleinschalig, maar groeide uit tot een enorm netwerk van tabellen. Dat gebeurde naargelang er nieuwe requirements kwamen van klanten. Momenteel is het datamodel zodanig uitgebreid dat het vrijwel niet op papier voor te stellen valt. Onderstaande afbeelding is slechts een deel van het ERD. Dat geeft al een idee van de omvang van de databank.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{img/erp/cpsolution-dbml.png}
+	\caption{\label{fig:cpsolution-dbml}Blik op het datamodel van CPSolution}
+\end{figure}
+
+
+Om orde aan te brengen in het enorme aantal tabellen, werkt 14IT met een vaste naamgeving.
+Tabellen die conceptueel rond eenzelfde thema draaien, worden voorafgegaan door eenzelfde afkorting. Op die manier worden de tabellen onderverdeeld in subcategorieën die van elkaar gescheiden worden met een onderstrepingsteken. Alle tabellen inzake producten worden bijvoorbeeld voorafgegaan door de aanduiding \verb*|PROD_|. Bepaalde subgroepen van de producttabellen kunnen nog verder gegroepeerd worden. Tabellen die beginnen met \verb*|CPS_PROD_PA_| zijn daar een voorbeeld van. Ze betreffen de ``PurchaseAgreements'' van producten. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{img/erp/naamgeving-tabellen.png}
+	\caption{\label{fig:naamgeving-tabellen}Naamgeving van tabellen}
+\end{figure}
+
+De databank van CPSolution kent een heel aantal prefixen. Deze hangen vaak samen met een bepaalde module. Aangezien een lijst met modules~\footnote{Zie bijlage} iets bevattelijker is, is het niet nodig om al deze prefixen ook op te lijsten.
+
+Enkele bijzondere tabellen zijn die met prefix:
+\begin{itemize}
+	\item \verb*|IMP_|: Deze tabellen dienen als tussenstap om data uit Excel-bestanden van een klant te importeren in de databank. In deze tussenstap kan gecontroleerd worden of de data compleet en consistent is. Daarna kan men op basis van deze tabel kiezen welke rijen al dan niet geïmporteerd moeten worden. Dan gaat die data van de \verb*|IMP|-tabel naar zijn \verb*|CPS|-equivalent.
+	\item \verb*|BCK_|: De tabellen die gebruikt worden om back-ups van de data te voorzien.
+	\item \verb*|ERR_|: Een tabel die errors en logs van het systeem bijhoudt.
+	\item \verb*|LOGS_|: Lijst van logins met gebruikersnaam en tijdstip.
+	\item \verb*|X_|: Wanneer klanten specifieke databehoeften hebben, is er soms nood aan een tabel die enkel voor die klant gebruikt zal worden. Die krijgen deze aanduiding.
+	\item \verb*|MON_|: 14IT kan indien gewenst allerlei processen bij de klant monitoren. Zo kan men bijvoorbeeld nagaan of er een probleem is met de automatische back-ups. Hiervoor wordt op geregelde tijdstippen data opgeslagen in de \verb*|MON|-tabellen. 
+\end{itemize}
+
+Tabellen met het achtervoegsel ``Discription'' houden de vertalingen bij van een specifieke tabel. Zo worden de vertalingen voor de records in CPS\_PROD\_Product bijgehouden in de tabel \verb*|CPS_PROD_ProductDescription|. Standaard worden de talen Engels, Frans en Nederlands voorzien. Klanten kunnen echter ook een extra module aanvragen om zelf extra vertalingen te voorzien in een andere taal zoals het Pools.
+
+Wanneer een klant een nieuwe requirement stelt voor het ERP-systeem, wordt vanuit ontwikkeling steeds bekeken of het praktijkprobleem van dat bedrijf kan veralgemeend worden naar een module die voor meerdere klanten interessant is. Zulke uitbreidingen of wijzigingen vereisen soms een zekere datarefactoring. Het ontwerp van de databank wordt dan aangepast, met als doel een zo generiek mogelijk systeem te ondersteunen. 
+
+
+\section{Electronic data interchange}
+\label{sec:electronic-data-interchange}
+Sinds de digitale revolutie is het gangbaar geworden om bedrijfsdocumenten zoals facturen, orders en rekeningen elektronisch uit te wisselen. Dit gegeven kreeg de algemene term ``electronic data interchange'' (EDI) toegeschreven. 
+EDI biedt als voordeel dat het ontvangende bedrijf het document efficiënter kan opnemen in een eigen digitaal systeem. Een fysiek document, daarentegen, vereist daarvoor manuele ingave of geavanceerde technieken zoals OCR~\footnote{Optical character recognition software kan gebruikt worden om tekst te extraheren uit een afbeelding.}.
+
+Bedrijven hebben hun eigen systemen die niet altijd op elkaar zijn afgestemd qua dataoverdracht. Om dit probleem aan te pakken, werden EDI-standaarden afgesproken. Bedrijven kunnen zich dan afstemmen om deze formaten, om de data te vertalen naar een formaat dat binnen hun ERP-pakket past.
+
+CPSolution staat niet rechtstreeks met andere systemen in contact om aan EDI te doen. Hiervoor wordt beroep gedaan op de services van Basware. Bestanden zoals orders en facturen worden als een gestructureerde XML naar BasWare gestuurd. Zij vormen het om naar het juiste EDI formaat en sturen dit door naar de ontvanger.
+
