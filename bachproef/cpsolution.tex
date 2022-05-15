@@ -111,7 +111,27 @@ Wanneer een klant een nieuwe requirement stelt voor het ERP-systeem, wordt vanui
 \section{Electronic data interchange}
 \label{sec:electronic-data-interchange}
 Sinds de digitale revolutie is het gangbaar geworden om bedrijfsdocumenten zoals facturen, orders en rekeningen elektronisch uit te wisselen. Dit gegeven kreeg de algemene term ``electronic data interchange'' (EDI) toegeschreven. 
-EDI biedt als voordeel dat het ontvangende bedrijf het document efficiënter kan opnemen in een eigen digitaal systeem. Een fysiek document, daarentegen, vereist daarvoor manuele ingave of geavanceerde technieken zoals OCR~\footnote{Optical character recognition software kan gebruikt worden om tekst te extraheren uit een afbeelding.}.
+EDI biedt als voordeel dat het ontvangende bedrijf het document efficiënter kan opnemen in een eigen digitaal systeem. Een fysiek document, daarentegen, vereist daarvoor manuele ingave of geavanceerde technieken zoals OCR~\footnote{Optical character recognition software kan gebruikt worden om tekst te extraheren uit een afbeelding.}. Desondanks blijven ook deze papieren varianten een vaste waarde in het bedrijfsleven.
+
+\subsection{Moeilijkheden}
+
+Het hele EDI-gebeuren vereist dat de interne systemen van onderhandelende partijen op elkaar afgestemd zijn. Voor software-ontwikkelaars is dit geen evidente opdracht. 
+
+\subsubsection{Aaneenschakeling}
+Een deel van dit probleem probeerde men te vereenvoudigen door vaste EDI-standaarden af te spreken. Ondernemingen kunnen dan de nodige ``vertalingen'' voorzien van hun data naar het gedeelde formaat, in plaats van een rechtstreekse omzetting te moeten maken naar het externe systeem. Dergelijke omzettingen, veroozaken weinig problemen indien het een enkele overschakeling betreft. Binnen een context van een supply chain, waar factuurdata doorheen verschillende ondernemingen moet gaan, kan een veelvoud van ``vertalingen'' er echter voor zorgen dat de benodigde, correcte data verloren gaat. Als analogie kan men dit probleem vergelijken met het spelletje ``Chinees gefluister''\footnote{Chinees gefluister is de titel van een spelletje waarin kinderen op een rij staan, met als doel een boodschap van persoon tot persoon door te fluisteren. Vaak probeert men met dit spelletje de kinderen te laten ondervinden dat de boodschap drastisch veranderd kan zijn, op het moment dat het bij de laatste schakel aankomt.}. In een ideaal scenario zou de oorsponkelijke data van elke stap in de schakel steeds beschikbaar moeten blijven.
+
+
+\subsubsection{Confidentialiteit}
+Daarnaast is het ook belangrijk dat de data de juiste ontvanger bereikt. Data over de onderhandelingen tussen twee ondernemingen moeten niet openbaar zijn, maar moeten tegelijk wel steeds op een vlotte manier raadpleegbaar zijn voor beide partijen.
+
+\subsubsection{Verifieerbaarheid}
+
+In de andere richting moet de ontvanger ook kunnen verifiëren dat de data van de juiste partij afkomstig is. In de praktijk gaat dit doorgaans gepaard met manuele checks op basis van papieren facturen. Daarnaast moet ook nog de digitale versie van de factuur nagekeken worden. Dat zorgt voor heel wat dubbelwerk. 
+
+
+\subsection{As is}
+CPSolution staat niet rechtstreeks in contact met andere systemen om aan EDI te doen. Hiervoor wordt beroep gedaan op de services van Basware. Bestanden zoals orders en facturen worden als een gestructureerde XML naar BasWare gestuurd. Zij vormen het om naar het juiste EDI formaat en sturen dit door naar de ontvanger.
+
 
 Bedrijven hebben hun eigen systemen die niet altijd op elkaar zijn afgestemd qua dataoverdracht. Om dit probleem aan te pakken, werden EDI-standaarden afgesproken. Bedrijven kunnen zich dan afstemmen om deze formaten, om de data te vertalen naar een formaat dat binnen hun ERP-pakket past.
 
