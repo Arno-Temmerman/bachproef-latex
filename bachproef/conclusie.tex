@@ -14,5 +14,30 @@
 % Heeft het onderzoek geleid tot nieuwe vragen die uitnodigen tot verder 
 %onderzoek?
 
-\lipsum[76-80]
 
+Met dit onderzoek werd een antwoord gezocht op de vraag:
+
+\begin{center}
+	\textit{\textbf{``Hoe kunnen softwareontwikkelaars overgaan tot integratie van blockchaintechnologie voor de dataopslag van hun ERP-systeem?''}}
+\end{center}
+
+Dit werkstuk vormt op zich al een eerste deel van het antwoord op die vraag. Een softwareontwikkelaar die wil \textbf{overgaan tot} integratie, moet namelijk eerst
+\begin{enumerate}
+	\item een gefundeerd inzicht krijgen in de innerlijke werking van blockchains;
+	\item het eigen ERP-systeem grondig in kaart brengen, om zo een zicht te krijgen op wat voor verbetering vatbaar is;
+	\item de vorige twee items aaneenknopen door naar die blockchain-toepassingen te zoeken die potientieel vertonen binnen ERP.
+\end{enumerate}
+
+Deze bachelorproef vervult alvast deze drie voorwaarden voor 14IT. De hoofdstukken drie tot en met vijf werden zodanig opgesteld dat de lezer er vlot de nodige bagage mee kan vergaren. Dat geld vooral binnen 14IT, maar ook voor softwareontwikkelaars in het algemeen.
+
+De onderzoeksvraag onstond echter vanuit de concrete casus van CPSolution. Als gevolg moet er ook een concreet besluit getrokken worden. Bovenvermelde hoofdstukken helpen de lezer wel bij het overgaan tot integratie, maar nog niet bij het \textbf{integreren} zelf. Dat gebeurt in het zesde hoofdstuk.
+
+De meest rudimentaire conclusie is dat het effectief mogelijk is om als kmo de data van een eigen ERP-systeem op te slaan in een blockchain. Dit vormde bij aanvang van het onderzoek nog een groot vraagteken, maar werd met de proof of concept positief bevestigd. Een blockchain zoals BSV staat open voor allerhande data. Onder de vorm van een \textit{data-carrying} output kon data, zoals die uit het ERP-systeem, op de blockchain geplaatst worden. 
+
+De suggestie van dit onderzoek is om bovenstaand principe in te schakelen voor het stockeren van digitale facturen. De data die dan op de blockchain komt is een geëncrypteerd UBL-bestand van die factuur. CPSolution beschikt al over de functionaliteiten om een factuur onder dat formaat te exporteren. Als bestuurslid van UBL.BE, kan 14IT zo de missie van de werkgroep misschien zelfs nog meer kracht bijzetten.
+
+Dit gegeven biedt tevens een nuttige \textit{use case}, genaamd NFT invoicing. Een API die data van de keten leest en daarna decrypteert, biedt de debiteur een endpoint om de factuur gemakkelijk op te halen. Op die manier kunnen e-invoices uitgewisseld worden via de openbare ``databank'' die men de blockchain noemt. Het biedt een alternatief voor de huidige manier waarop CPSolution aan EDI doet. Dankzij de \textit{incorruptibility} en \textit{transparancy} vormt de blockchain een ``single source of truth'' voor onderhandelende partijen.
+
+De API-call biedt als voordeel dat het als QR-code op papier kan gezet worden. Zo komt deze oplossing ook tegemoet aan de wens van bedrijven die facturen op papier valideren. Met een eenvoudige scan krijgt de ontvanger meteen de ongewijzigde, digitale tweeling van het document. Mits een check op identity toe te voegen, kan de ontvanger ook valideren dat deze van de correcte partij komt.
+
+Een API zoals hierboven beschreven wordt aangeboden door het bedrijf mintBlue. Deze omvat ook methodes voor het wegschrijven van data in de blockchain. Met een dergelijke service zou 14IT NFT invoicing als module van CPSolution kunnen integreren, zonder zelf extra infrastructuur op te stellen of te onderhouden. Daarvoor moet enkel de business logica geprogrammeerd rond de aangeboden API-calls ``naar de blockchain''. Dat kan in C\# en zou het vervolg van dit onderzoek vormen.
