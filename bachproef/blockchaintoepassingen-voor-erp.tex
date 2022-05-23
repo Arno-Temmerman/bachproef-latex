@@ -16,6 +16,7 @@ De volgende sectie maakt duidelijk dat er ook scripts of programmatuur op een bl
 Om de overstap naar de laatste deelvraag te maken, werd een laatste sectie toegeweid aan NFT's. Een concreet voorbeeld illustreert dat het mogelijk is om allerlei data in een blockchain op te nemen. Daarmee wordt een conceptuele sprong gemaakt die absoluut nodig was om de proof of concept op poten te zetten.
 
 \section{Blockchainplatformen}
+\label{sec:blockchainplatformen}
 
 De originele \textit{Bitcoin} \textit{whitepaper} inspireerde talloze spelers om een eigen versie van een blokchain te ontwikkelen. Ondertussen brachten al verschillende ondernemingen hun eigen variant op de markt. Om deze implementaties van elkaar te onderscheiden spreekt men over verschillende ``blockchainplatformen''. Elk platform biedt een basis aan ontwikkelaars om nieuwe toepassingen te bouwen op de bestaande blokchain-infrastructuur
 ~\autocite{Saraf2018}.
@@ -56,10 +57,12 @@ Deze drie voorbeelden werden opgenomen in de tabel, omdat ze in zekere zin een b
 \end{itemize}
 
 \subsection{Hard forks}
+\label{sub:hard-forks}
 
 Zoals reeds vermeld, kunnen blockchainplatformen de basis vormen voor nieuwe varianten. Wanneer er ingrijpende aanpassingen gemaakt worden aan het protocol van een basis-blockchain, spreekt men over een ``hard fork''. Door uiteenlopende visies kunnen op die manier verschillende ``smaken'' van eenzelfde blockchain ontstaan. Wanneer men over de Bitcoin-blockchain spreekt, heeft men het doorgaans over de originele BTC-fork. Nochtans is dit niet de enige. Sinds het ontstaan werd er steeds verder getweakt aan de implementatie. Omdat informatici een eigen visie hadden over hoe de keten stabiel gemaakt kon worden, ontstonden ook forks zoals BSV (Blockchain Satoshi Vision). In die vertakking probeerde men zoveel mogelijk terug te keren op het oorspronkelijk protocol. Verschillende ontwerpkeuzes zorgen ervoor dat de ene fork meer schaalbaarheid of rekenkracht kan bieden dan de andere. Als gevolg zijn bepaalde forks meer of minder geschikt voor het opslaan van data in een ERP-context.
 
 \section{Smart contracts}
+\label{sec:smart-contracts}
 
 Een \textit{smart contract} is een stuk computercode dat geïmplementeerd wordt bovenop een blockchain als digitale versie van een contract. Ze maken het mogelijk om contractuele voorwaarden automatisch af te dwingen, zonder de tussenkomst van een derde partij~\autocite{Salem2008}.
 
@@ -72,6 +75,7 @@ De voorwaarden en bijhorende gevolgen van het contract, worden omgezet naar verz
 \end{figure}
 
 \subsection{Creatie}
+\label{sub:creatie}
 
 In een eerste fase leggen de betrokken partijen de voorwaarden van het contract vast in gewone mensentaal. Eens opgesteld, kan een software engineer de (voorwaarden van) dit contract omzetten in code. Dit is mogelijk in verschillende high-level programmeertalen, zoals Python, Java of Solidity~\autocite{Bahga2016}. Een compiler zet deze statements om naar een \textit{smart contract} onder de vorm machinecode, dat klaar is om in de blockchain gezet te worden~\autocite{Zheng2019}.
 
@@ -79,6 +83,7 @@ In een eerste fase leggen de betrokken partijen de voorwaarden van het contract 
 Partijen A en B sluiten een contract: indien een metaaldetector iets aantreft in de voedselverwerking van partij A, moet partij B hiervoor beboet worden. Een software engineer krijgt de opdracht om dit contract om te zetten in code.
 
 \subsection{Deployment}
+\label{sub:deployment}
 
 Eens een contract wordt weggeschreven naar de blockchain, kan het niet meer gewijzigd worden. Zoals al aangegeven, zijn de voorwaarden van het contract vertaald naar functies en variabelen. Indien men een nieuwe voorwaarde wenst toe te voegen aan het contract, zal men een nieuw \textit{smart contract} moeten aanmaken. Dankzij de transparantie van de blockchain kunnen alle partijen het contract raadplegen~\autocite{Zheng2019}.
 
@@ -86,6 +91,7 @@ Eens een contract wordt weggeschreven naar de blockchain, kan het niet meer gewi
 Het \textit{smart contract} tussen partij A en B wordt op de blockchain geplaatst.
 
 \subsection{Uitvoering}
+\label{sub:uitvoering}
 
 Tijdens de uitvoering wordt voortdurend gemonitord of er nieuwe transacties op de blockchain geplaatst worden die de voorwaarden van het contract vervullen. Wanneer een functie getriggerd word zal deze de voorgeprogrammeerde implicaties uitvoeren als een nieuwe transactie in de blockchain. Met andere woorden: het contract werd afgedwongen, zonder actieve tussenkomst van een derde partij~\autocite{Delmolino2016}.
 
@@ -93,6 +99,7 @@ Tijdens de uitvoering wordt voortdurend gemonitord of er nieuwe transacties op d
 De metaaldetector van partij A merkt een onzuiverheid op in het productieproces. Deze detectie wordt onder de vorm van een transactie opgeslagen op de blockchain. Dit triggert het \textit{smart contract} dat op zijn beurt een transactie op de keten plaatst om aan om deze gebeurtenis te documenteren.
 
 \subsection{Afronding}
+\label{sub:afronding}
 
 Om de levenscyclus van een \textit{smart contract} af te ronden, worden de betrokken partijen op de hoogte gebracht. De status van de partijen wordt geüpdatet indien nodig~\autocite{Zheng2019}.
 
@@ -102,6 +109,7 @@ Partijen A en B worden op de hoogte gebracht. Partij B maakt het nodige bedrag o
 
 
 \section{NFT's}
+\label{sec:nfts}
 
 Zoals vermeld in Subsectie \ref{sub:transacties} - \nameref{sub:transacties}, stond een transactie oorspronkelijk voor de bitcoin-overdracht van een partij naar een andere~\autocite{Pierro2017}. Bij elke transactie worden digitale tokens uitgewisseld die door de ontvangende partij opnieuw uitgegeven kunnen worden. Op geen enkel punt is het daarbij zinvol om een onderscheid te maken tussen individuele tokens. Ze zijn namelijk onderling gelijkwaardig. Zo komt een Bitcoin wallet aan zijn saldo lauter door het aantal bitcoins waaruit het bestaat. Het is daarbij niet van belang wélke bitcoin-tokens dat specifiek zijn. In die zin zijn de tokens van Blockchain 1.0 fungibel of vervangbaar.
 
@@ -110,6 +118,7 @@ Met de overgang naar Blockchain 2.0 wordt op dit vlak een conceptuele sprong gem
 Een diepgaande technische uiteenzetting van NFT's is niet opportuun voor deze scriptie. Aangezien deze tokens wel hun nut bewijzen in een ERP-context, is het echter wel belangrijk om een gegrond beeld te krijgen van wat ze juist zijn.
 
 \subsection{Voorbeeld}
+\label{sub:voorbeeld}
 
 Op digitale markplaatsen zoals OpenSea kan men de inhoud en details van allerlei NFT's verkennen. Deze bevinden zich op een blockchain zoals die van Ethereum. Heel wat grafische kunstwerkjes worden op die manier ``als NFT'' te koop aangeboden. Onderstaand voorbeeld illustreert wat dat juist inhoudt.
 
