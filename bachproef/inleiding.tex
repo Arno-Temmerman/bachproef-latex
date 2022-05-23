@@ -11,7 +11,9 @@ Die drang tot innovatie zet mensen ertoe aan om de technologie vanuit allerlei f
 \section{Context}
 \label{sec:context}
 
-De insteek voor dit onderzoek kwam vanuit het softwarebedrijf 14IT. 14IT ontwikkelde het softwarepakket CPSolution voor zijn klanten: een ERP-systeem door/voor kmo's. Een deel van het takenpakket bestaat uit het verder ontwikkelen en onderhouden van deze software. Binnen dit kader van continuous improvement ontstond de interesse in dit onderwerp. Mede-eigenaar en co-promotor Geert Borloo stelt zich de vraag of het programma verbeterd of uitgebreid kan worden door in te zetten op blockchain. Van hieruit ontstond de nood aan een onderzoek naar een mogelijke synergie tussen blockchain en ERP. 
+De insteek voor dit onderzoek kwam vanuit het softwarebedrijf 14IT. 14IT begon in 2014 met de ontwikkeling van CPSolution: een ERP-systeem door/voor kmo's. Een deel van het takenpakket bestaat uit het onderhouden en verder ontwikkelen van deze software. Binnen dit kader van \textit{continuous improvement} ontstond de interesse in dit onderwerp. Mede-eigenaar en copromotor Geert Borloo stelt zich de vraag of het programma verbeterd of uitgebreid kan worden door in te zetten op blockchaintechnologie. Vooral voor de dataopslag van facturen, contracten, abonnementen, ...  is 14IT benieuwd naar een mogelijke meerwaarde. Van hieruit ontstond de nood aan een onderzoek naar een mogelijke synergie tussen blockchain en ERP. 
+
+\pagebreak
 
 De doelstelling, zoals hierboven beschreven, kan herleid worden naar volgende onderzoeksvraag:
 
@@ -19,61 +21,44 @@ De doelstelling, zoals hierboven beschreven, kan herleid worden naar volgende on
 	\textit{\textbf{``Hoe kunnen softwareontwikkelaars overgaan tot integratie van blockchaintechnologie voor de dataopslag van een ERP-systeem?''}}
 \end{center}
 
-In sectie - Methodologie staat beschreven hoe ik deze onderzoeksvraag op een systematische manier zal trachten te beantwoorden.
+In Hoofdstuk~\ref{ch:methodologie} -- \nameref{ch:methodologie} staat beschreven hoe deze onderzoeksvraag op een systematische manier werd beantwoord.
 
-Vooral voor de dataopslag van facturen, contracten, abonnementen, ...  is 14IT benieuwd naar een mogelijke meerwaarde.
+
 
 \section{Verantwoording}
 \label{sec:verantwoording}
 
-Opkomende technologieën vormen wel vaker de insteek van nieuwe projecten en onderzoeken. Een eerste doorbraak spreekt tot de verbeelding en zet aan tot innovatie. Op die manier kunnen echte hypes ontstaan, zoals bij blockchain het geval is. Dat maakt het nog belangrijker om het onderzoeksgebied van deze bachelorproef doelgericht af te bakenen. Uit analyses van Gartner blijkt namelijk dat het potentieel van hype-technologieën gemakkelijk overschat wordt~\autocite{Kietzmann2018}. Een succesvol onderzoek slaagt erin om hype te onderscheiden van mogelijks rendabele toepassingen.
+Opkomende technologieën vormen wel vaker de insteek van nieuwe projecten en onderzoeken. Een eerste doorbraak spreekt tot de verbeelding en zet aan tot innovatie. Op die manier kunnen echte hypes ontstaan, zoals bij blockchain het geval is. Dat maakt het nog belangrijker om het onderzoeksgebied van deze bachelorproef doelgericht af te bakenen. Uit analyses van Gartner blijkt namelijk dat het potentieel van hypetechnologieën gemakkelijk overschat wordt~\autocite{Kietzmann2018}. Een succesvol onderzoek slaagt erin om hype te onderscheiden van mogelijks rendabele toepassingen.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{img/inleiding/gartner-hypecycle.png}
 	\caption{\label{fig:gartner}Hype Cycle for Blockchain~\autocite{Gartner2021}}
 \end{figure}
 
-In Figuur~\ref{fig:gartner} werd blockchain opgesplitst in 22 verschillende toepassingen. Elke toepassing werd voorgesteld als een punt op de Gartner Hype Cycle: een curve die weergeeft hoe de perceptie rond een hype-technologie evolueert doorheen vijf vaste fases. Elk punt toont aan in welke fase de bijhorende toepassing zich bevindt (x-as) en als gevolg ook hoe hoog de verwachtingen errond zijn (y-as). De kleur van het punt stelt tevens een inschatting voor van hoe snel die toepassing matuur zal worden. 
+\pagebreak
+
+In Figuur~\ref{fig:gartner} werd blockchain opgesplitst in 22 verschillende toepassingen. Elke toepassing werd voorgesteld als een punt op de Gartner Hype Cycle: een curve die weergeeft hoe de perceptie rond een hypetechnologie evolueert doorheen vijf vaste fases. Elk punt toont aan in welke fase de bijhorende toepassing zich bevindt (x-as) en als gevolg ook hoe hoog de verwachtingen errond zijn (y-as). De kleur van het punt stelt tevens een inschatting voor van hoe snel die toepassing matuur zal worden. 
 
 Merk op dat 9 van de 22 toepassingen zich nog in de eerste opwaartse trend van de curve bevinden.
-Die stijging wordt op gang getrokken door  een ``Innovation Trigger'' zoals een proof-of-concept of belangstelling in de media. Men schat het potentieel heel hoog in, hoewel daar op dat moment nog weinig tot niets van in vervulling gebracht is. Hierdoor bereiken de verwachtingen al snel een maximum dat aanzienlijk hoger ligt dan wat de toepassing daadwerkelijk zal kunnen waarmaken: de ``Peak of Inflated Expectations''. Deze schromelijke overschatting zorgt gelukkig wel voor het nodige initiatief om de eerste commerciële projecten op poten te zetten. Een proces dat nog heel riskant is in dit onwtikkelingsstadium.
+Die stijging wordt op gang getrokken door  een ``Innovation Trigger'' zoals een \textit{proof of concept} of belangstelling in de media. Men schat het potentieel heel hoog in, hoewel daar op dat moment nog weinig tot niets van in vervulling gebracht is. Hierdoor bereiken de verwachtingen al snel een maximum dat aanzienlijk hoger ligt dan wat de toepassing daadwerkelijk zal kunnen waarmaken: de ``Peak of Inflated Expectations''. Deze schromelijke overschatting zorgt gelukkig wel voor het nodige initiatief om de eerste commerciële projecten op poten te zetten. Een proces dat nog heel riskant is in dit ontwikkelingsstadium.
 
 De ``Trough of Disillusionment'' maakt zijn intrede wanneer de eerste projecten niet het gewenste resultaat opleveren.
-De verwachtingen van investeerders gaan de dieperik in door wat voor hen overkomt als mislukte experimenten. Desondanks is het een fase die zich aanbiedt als de geschikte gelegenheid tot onderzoek. Toepassingen, zoals \textit{Smart Contracts} en \textit{Blockchain Platforms (aaS)} komen stilaan \textit{down to earth} komen en vallen daarom mooi binnen de scope van deze paper. Een mix van succesverhalen en mislukkingen zorgen ervoor dat de grootste waanbeelden de deur uit zijn. De eerste commerciële implementaties doen hun intrede op de markt. Ze staan weliswaar nog in hun kinderschoenen, waardoor bovenstaande vraag echt wel als een onderzoeksvraag mag beschouwd worden. 
+De verwachtingen van investeerders gaan de dieperik in door wat voor hen overkomt als mislukte experimenten. Desondanks is het een fase die zich aanbiedt als de geschikte gelegenheid tot onderzoek. Toepassingen, zoals ``Smart Contracts'' en ``Blockchain Platforms (aaS)'' komen stilaan \textit{down to earth} en vallen daarom mooi binnen de scope van deze paper. Een mix van succesverhalen en mislukkingen zorgen ervoor dat de grootste waanbeelden de deur uit zijn. De eerste commerciële implementaties doen hun intrede op de markt. Ze staan weliswaar nog in hun kinderschoenen, waardoor de vraag uit Sectie~\ref{sec:context} -- \nameref{sec:context} echt wel als een onderzoeksvraag mag beschouwd worden. 
 
-In de huidige fase is het nog moeilijk om te beslissen of er mee op de trein gesprongen moet worden of niet. Met dit onderzoek kan hopelijk al een voorproefje gevonden worden van wat de ``Slope of Enlightenment''. Op die manier kan blockchain al benut worden voor de voordelen die binnen enkele jaren pas glashelder zullen worden. De ``Plateau of Productivity'' zal dan weer bereikt worden wanneer mainstream implementaties algemeen benut worden.
+In de huidige fase is het nog moeilijk om te beslissen of er mee op de trein gesprongen moet worden of niet. Met dit onderzoek kan hopelijk al een voorproefje gevonden worden van wat de ``Slope of Enlightenment'' zal brengen. Op die manier kan blockchain al benut worden voor de voordelen die binnen enkele jaren pas glashelder zullen worden. De ``Plateau of Productivity'' zal pas bereikt worden wanneer mainstream implementaties algemeen benut worden.
 
-
-
-\section{Onderzoeksdoelstelling}
-\label{sec:onderzoeksdoelstelling}
-
-werkstuk
-
-PvA (verslag met aanbevelingen)
-
-vergelijkende studie
-
-in methodologie staat uitgeschreven hoe ik dit resultaat heb nagestreefd
-
-(zie onderzoeksvoorstel)
-
-
-
+\newpage
 
 \section{Opzet van deze bachelorproef}
-\label{sec:opzet-bachelorproef}
+\label{sec:opzet-van-deze-bachelorproef}
 
 % Het is gebruikelijk aan het einde van de inleiding een overzicht te
 % geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
 % die je kan aanvullen/aanpassen in functie van je eigen tekst.
 
-De rest van deze bachelorproef is als volgt opgebouwd:
+De doelstelling van deze bachelorproef is om na te gaan of er een plaats is voor blockchain binnen het ERP-systeem van 14IT. Het is niet meteen duidelijk of het al dan niet haalbaar voor kmo's om data op te slaan in een blockchain. Daarnaast blijft ook nog de vraag of hier nuttige use cases voor weggelegd zijn. Om het onderzoek te laten slagen, was het van cruciaal belang om een resultaat na te streven dat praktisch bruikbaar is door 14IT. Dat gebeurde op twee manieren. 
 
-In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
+Enerzijds moet dit werkstuk de lezer in staat stellen om zich op een vlotte manier in te werken in het onderwerp. Er valt al veel informatie te vinden over blockchains, waarvan niet even interessant is voor een ERP-systeem. De opbouw die in deze bachelorproef werd nagestreefd, zou 14IT moeten helpen om de state-of-the-art van het onderwerp snel te vatten.
 
-In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
+Anderzijds biedt deze bachelorproef een \textit{proof of concept}. Deze zet de kennis en bevindingen van de sciptie om in een concrete toepassing. Het geeft 14IT een duidelijk beeld van wat mogelijk is binnen hun softwarepakket.
 
-% TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
-
-In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
