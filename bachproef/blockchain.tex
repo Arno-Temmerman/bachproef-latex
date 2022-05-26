@@ -22,7 +22,7 @@ In de whitepaper ``Bitcoin: A Peer-to-Peer Electronic Cash System'' werkte Satos
 \subsection{Double-spending}
 \label{sub:double-spending}
 
-\textit{Double-spending} is een probleem binnen de context van \textit{cryptocurrencies}. Het doet zich voor wanneer een partij eenzelfde digitale token voor meerdere transacties gebruikt, hoewel dit maar voor een het geval zou mogen zijn~\autocite{Chohan2021}. Digitale munten kunnen namelijk (net zoals fysiek geld) gedupliceerd of vervalst worden. In tegenstelling tot tastbaar geld, bestaan digitale munten echter uitsluitend uit binaire data. Dat maakt de strijd tegen vervalsing extra uitdagend. Een kenteken van authenticiteit toevoegen, is op het eerste zicht niet mogelijk. Data kan namelijk heel gemakkelijk gerepliceerd worden. Een simpele aanduiding, analoog aan de zilverstrook op een bankbiljet, is bij een cryptomunt dus compleet zinloos. Het zou met een eenvoudige copy-paste kunnen vervalst worden~\autocite{Hoepman2008}. Om cryptomunten op de markt te brengen, waren dus andere oplossingen nodig.
+\textit{Double-spending} is een probleem binnen de context van \textit{cryptocurrencies}. Het doet zich voor wanneer een partij eenzelfde digitale token voor meerdere transacties gebruikt, hoewel dit maar voor een het geval zou mogen zijn~\autocite{Chohan2021}. Digitale munten kunnen namelijk (net zoals fysiek geld) gedupliceerd of vervalst worden. In tegenstelling tot tastbaar geld, bestaan digitale munten echter uitsluitend uit binaire data. Dat maakt de strijd tegen vervalsing extra uitdagend. Een kenteken van authenticiteit toevoegen, is op het eerste gezicht niet mogelijk. Data kan namelijk heel gemakkelijk gerepliceerd worden. Een simpele aanduiding, analoog aan de zilverstrook op een bankbiljet, is bij een cryptomunt dus compleet zinloos. Het zou met een eenvoudige copy-paste kunnen vervalst worden~\autocite{Hoepman2008}. Om cryptomunten op de markt te brengen, waren dus andere oplossingen nodig.
 
 
 \subsection{Transacties}
@@ -39,7 +39,7 @@ In het boek ``Blockchain: Blueprint for a New Economy'' wordt blockchain-technol
 
 \textbf{Blockchain 2.0} staat voor een uitbreiding van de technologie, die voornamelijk beperkt blijft tot de financiële sector. Banken, betalingen en de \textit{supply chain} geven aanleiding tot transacties zoals
 \begin{itemize}
-	\item afsluiten van \textit{smart contracts}
+	\item afsluiten van \textit{smart contracts};
 	\item uitwisselen van aandelen;
 	\item uitwisselen van hypotheken;
 	\item afsluiten van een abonnement;
@@ -81,18 +81,18 @@ Partij A voert een transactie uit met partij B. Partij A schrijft de transactie 
 Partij C voert een transactie uit met partij A. Partij C schrijft de transactie weg in de \textit{ledger}.
 \end{tcolorbox}
 
-Er schuilt een inherente vertrouwenskwestie in het bijhouden van een gedeelde \textit{ledger}: alle deelnemedende partijen moeten elkaar vertrouwen. Volgende kwestie lijkt op het \textit{double-spendingprobleem} bij cryptomunten:
+Er schuilt een inherente vertrouwenskwestie in het bijhouden van een gedeelde \textit{ledger}: alle deelnemende partijen moeten elkaar vertrouwen. Volgende kwestie lijkt op het \textit{double-spendingprobleem} bij cryptomunten:
 
 \textbf{Probleem:} 
-Partij A voert geen transactie uit met partij B, maar schrijft toch een lijn weg in de \textit{ledger}. Partij B gaat hier uiteraard niet mee akkoord. Voor partij C lijkt het alsof er nog een transactie plaatsvond tussen A en B.
+Partij A voert geen transactie uit met partij B, maar schrijft toch een lijn weg in de \textit{ledger}. Partij B gaat hier uiteraard niet mee akkoord. Voor partij C lijkt het alsof er toch een transactie plaatsvond tussen A en B.
 
 
 \subsection{Centralized ledger}
 \label{sub:centralized-ledger}
 
-Voorgaande probleemstelling werd traditioneel aangepakt vanuit een gecentraliseerd systeem. Er wordt een onafhankelijke partij ingeschakeld voor het bijhouden en bewaken van de \textit{ledger}~\autocite{Rawat2020}. Deze derde partij houdt de \textit{ledger} bij op een centrale databank die raadpleegbaar is door alle andere partijen. Wie een transactie wilt wegschrijven in de \textit{ledger}, doet een aanvraag die kan gecheckt worden. Op die manier waakt de centrale partij erover dat er enkel geldige en geverifieerde transacties in de \textit{ledger} kunnen komen. 
+Voorgaande probleemstelling werd traditioneel aangepakt vanuit een gecentraliseerd systeem. Er wordt een onafhankelijke partij ingeschakeld voor het bijhouden en bewaken van de \textit{ledger}~\autocite{Rawat2020}. Deze derde partij houdt de \textit{ledger} bij op een centrale databank die raadpleegbaar is door alle andere partijen. Wie een transactie wil wegschrijven in de \textit{ledger}, doet een aanvraag die kan gecheckt worden. Op die manier waakt de centrale partij erover dat er enkel geldige en geverifieerde transacties in de \textit{ledger} kunnen komen. 
 
-Om de authenticiteit van een transactie aan te tonen wordt in de praktijk gebruik gemaakt van een \textit{digital signature}~\autocite{Salem2008}. Het vormt de oplossing voor het \textit{copy-pasteprobleem} dat werd aangehaald in subsectie \ref{sub:double-spending} - \nameref{sub:double-spending}. Door bij elke regel een unieke code te gegenereren op basis van een publieke en private sleutel, kan deze later geverifiëerd worden\footnote{Een diepgaandere uiteenzetting van \textit{digital signatures} is in dit onderzoek niet aan de orde.}. Net zoals een handtekening bij fysieke documenten, wordt zo de probleemstelling aangepakt.
+Om de authenticiteit van een transactie aan te tonen wordt in de praktijk gebruik gemaakt van een \textit{digital signature}~\autocite{Salem2008}. Het vormt de oplossing voor het \textit{copy-pasteprobleem} dat werd aangehaald in subsectie \ref{sub:double-spending} -- \nameref{sub:double-spending}. Door bij elke regel een unieke code te genereren op basis van een publieke en private sleutel, kan deze later geverifiëerd worden\footnote{Een diepgaandere uiteenzetting van \textit{digital signatures} is in dit onderzoek niet aan de orde.}. Net zoals een handtekening bij fysieke documenten, wordt zo de probleemstelling aangepakt.
 
 \begin{figure}[H]
 	\centering
@@ -106,13 +106,13 @@ Merk op dat de probleemstelling in principe niet volledig opgelost is. De vertro
 Op vraag van partij A verwijdert het centrale figuur een voorgaande transactie tussen A en B. 
 Aangezien dit de enige kopie is van de \textit{ledger} is er geen manier voor partij B om hierop terug te komen. Parij C weet niets over het hele scenario.
 
-Met een gedistribueerd systeem kan men de nood aan een centrale authoriteit proberen vermijden.
+Met een gedistribueerd systeem kan men het gebruik van een centrale authoriteit proberen vermijden.
 
 
 \subsection{Distributed ledger}
 \label{sub:distributed-ledger}
 
-Om de nood aan een centrale opslagplaatst te omzeilen, zou elke partij een eigen kopie kunnen bijhouden van de gezamenlijke \textit{ledger}. Zo kan elke partij over zijn kopie waken en valse transacties onderscheppen. Om een nieuwe regel toe te voegen aan de \textit{ledger}, wordt een signaal \textit{adcast} over het netwerk. De ontvangende partijen kunnen hierna hun versie van de \textit{ledger} updaten~\autocite{Nakamoto2008}. Hierdoor ontstaat echter een nieuw probleem.
+Om het gebruik van een centrale opslagplaatst te omzeilen, zou elke partij een eigen kopie kunnen bijhouden van de gezamenlijke \textit{ledger}. Zo kan elke partij over zijn kopie waken en valse transacties onderscheppen. Om een nieuwe regel toe te voegen aan de \textit{ledger}, wordt een signaal \textit{gebroadcast} over het netwerk. De ontvangende partijen kunnen hierna hun versie van de \textit{ledger} updaten~\autocite{Nakamoto2008}. Hierdoor ontstaat echter een nieuw probleem.
 
 \begin{figure}[H]
 	\centering
@@ -128,7 +128,7 @@ Hoewel het handig is dat elke partij zijn eigen versie van de gedeelde \textit{l
 \section{Uitgangspunten}
 \label{sec:uitgangspunten}
 
-De blockchain kwam als oplossing voor het probleem dat beschreven wordt in subsectie \ref{sub:distributed-ledger} - \nameref{sub:distributed-ledger}. Zoals reeds aangegeven, werd dit probleem voor het eerst opgelost bij de ontwikkeling van de Bitcoin. Om een gegrond inzicht te geven in de eigenschappen van een blockchain, is deze sectie opgedeeld in drie basisprincipes. De concrete invulling van die principes is gebaseerd op de oorspronkelijke implementatie door Nakamoto.
+De blockchain kwam als oplossing voor het probleem dat beschreven wordt in subsectie \ref{sub:distributed-ledger} -- \nameref{sub:distributed-ledger}. Zoals reeds aangegeven, werd dit probleem voor het eerst opgelost bij de ontwikkeling van de Bitcoin. Om een gegrond inzicht te geven in de eigenschappen van een blockchain, is deze sectie opgedeeld in drie basisprincipes. De concrete invulling van die principes is gebaseerd op de oorspronkelijke implementatie door Nakamoto.
 
 Volgende subsecties zullen aantonen hoe het vertrouwensprobleem bij een \textit{distributed ledger} kan opgelost worden door het gezamenlijk opstellen van een keten van datablokken: een proces genaamd ``\textit{mining}''.
 
@@ -138,7 +138,7 @@ Volgende subsecties zullen aantonen hoe het vertrouwensprobleem bij een \textit{
 
 Een eerste basisprincipe is dat de \textit{ledger} wordt opgebouwd uit zogenaamde blokken die elk een apart deel van de transacties oplijsten. Deze blokken worden om de zoveel tijd gegenereerd door een proces dat ``mining'' genoemd wordt~\autocite{Bhaskar2015}.
 
-Tijdens het \textit{minen}, wordt gedurende een beperkte tijdsspanne geluisterd naar de transacties die \textit{gebroadcast} worden over het netwerk. Het blok houdt deze transacties dan bij onder de vorm van een Merkle Tree\footnote{Deze speciale binaire boom maakt handig gebruik van hashing om de transacties van het blok snel valideerbaar te maken. Deze datastructuur wordt uitsluitend gebruikt binnen een blok. Om verwarring te vermijden met de structuur van de blockchain als geheel, wordt deze verder niet besproken.}~\autocite{Salem2008}. Op die manier omvat het een uniek deel van de \textit{ledger}. Wanneer de tijdslimiet verstreken is, kan de opbouw van het blok afgerond worden~\autocite{Nakamoto2008}. Hierbij gebeuren nog een aantal essentiële stappen die in de volgende subsecties besproken worden. 
+Tijdens het \textit{minen}, wordt gedurende een beperkte tijdspanne geluisterd naar de transacties die \textit{gebroadcast} worden over het netwerk. Het blok houdt deze transacties dan bij onder de vorm van een Merkle Tree\footnote{Deze speciale binaire boom maakt handig gebruik van hashing om de transacties van het blok snel valideerbaar te maken. Deze datastructuur wordt uitsluitend gebruikt binnen een blok. Om verwarring te vermijden met de structuur van de blockchain als geheel, wordt deze verder niet besproken.}~\autocite{Salem2008}. Op die manier omvat het een uniek deel van de \textit{ledger}. Wanneer de tijdslimiet verstreken is, kan de opbouw van het blok afgerond worden~\autocite{Nakamoto2008}. Hierbij gebeuren nog een aantal essentiële stappen die in de volgende subsecties besproken worden. 
 
 Wanneer een blok klaar is, wordt het in zijn geheel \textit{gebroadcast}, waarna het door de deelnemers van het netwerk kan geaccepteerd worden~\autocite{Nakamoto2008}. Zo wordt de \textit{distributed ledger} stuk per stuk aangevuld.
 Om deze stukken aan elkaar te linken, zal elk blok ook een verwijzing krijgen naar zijn voorganger. Voor deze verwijzing wordt gebruik gemaakt van een cryptografische hashfunctie. 
@@ -157,7 +157,7 @@ Naast een lijst van transacties, houdt elk blok ook een verwijzing bij naar het 
 \begin{center}
 	\begin{tikzpicture}[
 		roundnode/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=7mm},
-		squarednode/.style={rectangle, draw=blue!60, fill=blue!5, very thick, minimum size=5mm},
+		squarednode/.style={rectangle, draw={rgb,255:red,0;green,147;blue,208}, fill={rgb,255:red,102;green,190;blue,227}, fill opacity=0.1, text opacity=1, very thick, minimum size=5mm},
 		]
 		%Nodes
 		\node[squarednode,fill=none]  (blok-1)        					    {blok-1};
@@ -181,19 +181,19 @@ Naast een lijst van transacties, houdt elk blok ook een verwijzing bij naar het 
 
 Voor elke input van de hashfunctie, kan eenvoudig de output bepaald worden. Toch is het geheel onwezenlijk om de inverse berekening te maken. Daarom wordt deze hashfunctie cryptografisch genoemd. Dit is een van de sleutelkenmerken die blockchain mogelijk maken: het is niet haalbaar om de input van een gegeven hashwaarde te \textit{reverse-engineeren}~\autocite{Mansfield2018}. 
 
-Het is belangrijk om erop te wijzen dat zelfs de kleinste wijziging aan de input van een hashfunctie, een drastisch verschil maakt aan de output. In deze context betekent dit dat een wijziging aan een blok (hoe klein dan ook) ervoor zorgt dat zijn hashwaarde volledig verandert. Aangezien deze hashwaarden gebruikt worden om de blokken aan elkaar te ketenen, zal de blockchain hierdoor ergens doorbroken worden. De hashwaarde die naar dit blok verwees is namelijk niet meer correct.~\autocite{Salem2008} Om terug tot een geldige blockchain te komen zal er een hele kettingreactie moeten plaatsvinden. Onderstaand voorbeeld illustreert waarom dit het geval is:
+Het is belangrijk om erop te wijzen dat zelfs de kleinste wijziging aan de input van een hashfunctie, een drastische verandering maakt aan de output. In deze context betekent dit dat een wijziging aan een blok (hoe klein dan ook) ervoor zorgt dat zijn hashwaarde volledig verandert. Aangezien deze hashwaarden gebruikt worden om de blokken aan elkaar te ketenen, zal de blockchain hierdoor ergens doorbroken worden. De hashwaarde die naar dit blok verwees is namelijk niet meer correct~\autocite{Salem2008}. Om terug tot een geldige blockchain te komen zal er een hele kettingreactie moeten plaatsvinden. Onderstaand voorbeeld illustreert waarom dit het geval is:
 
-\begin{tcolorbox}[title=Voorbeeld]	
+\begin{tcolorbox}[title=\textbf{Voorbeeld}, colframe={rgb,255:red,0;green,147;blue,208}, colback={rgb,255:red,247;green,252;blue,254} ]	
 	\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0, font=\small}, align=left, node distance=.5]
 		
 		%Nodes
 		\node[draw=none,fill=none] (11)        					    {\textbf{Stel: }};
 		\node[draw=none,fill=none] (12) [right=of 11, xshift=-15] {Er wordt een wijziging aangebracht aan blok-1.};
 		\node[draw=none,fill=none] (13) [below=of 12.west, anchor=west, xshift=23] {De cryptohash van blok-1 verandert.};
-		\node[draw=none,fill=none] (21) [below=of 13.west, anchor=west, xshift=-46, yshift=-10]  {De prev\_block-verwijzing van blok-2 naar blok-1 moet geüpdatet worden.};
+		\node[draw=none,fill=none] (21) [below=of 13.west, anchor=west, xshift=-46, yshift=-10]  {De \verb*|prev_block|-verwijzing van blok-2 naar blok-1 moet geüpdatet worden.};
 		\node[draw=none,fill=none] (22) [below=of 21.west, anchor=west, xshift=23]  {M.a.w.: er wordt een wijziging aangebracht aan blok-2.};
 		\node[draw=none,fill=none] (23) [below=of 22.west, anchor=west, xshift=23]  {De cyptohash van blok-2 verandert.};
-		\node[draw=none,fill=none] (31) [below=of 23.west, anchor=west, xshift=-46, yshift=-10]  {De prev\_block-verwijzing van blok-3 naar blok-2 moet geüpdatet worden.};
+		\node[draw=none,fill=none] (31) [below=of 23.west, anchor=west, xshift=-46, yshift=-10]  {De \verb*|prev_block|-verwijzing van blok-3 naar blok-2 moet geüpdatet worden.};
 		\node[draw=none,fill=none] (32) [below=of 31.west, anchor=west, xshift=23]  {M.a.w.: er wordt een wijziging aangebracht aan blok-3.};
 		\node[draw=none,fill=none] (33) [below=of 32.west, anchor=west, xshift=23]  {De cyptohash van blok-3 wordt opnieuw berekend};
 		\node[draw=none,fill=none] (41) [below=of 33.west, anchor=west, xshift=-46, yshift=-10]  {...};
@@ -225,7 +225,7 @@ zonder verantwoordelijk te worden voor alle hashverwijzingen na het geïmpacteer
 Wie de \textit{ledger} wenst te vervalsen hoeft zich geen zorgen te maken over het doorbreken van de keten. 
 Door simpelweg de nodige hashes opnieuw te berekenen, komt men uiteindelijk terug tot een geldige blockchain. Dat kan, aangezien uitvoeren van een hashfunctie in constante tijd kan gebeuren~\autocite{Slaats2019}. Op die manier kunnen nog steeds tegenstrijdige, maar technisch geldige \textit{ledgers} ontstaan.
 
-Een laatste essentieel principe bestaat eruit om bij elk blok een extra speciaal stuk data te eisen, waardoor het vinden van een gepaste hash wel een rekenintesieve opdracht wordt. Op die manier wordt ook het bovenstaande probleem opgelost.
+Een laatste essentieel principe bestaat eruit om bij elk blok een extra speciaal stuk data te eisen, waardoor het vinden van een gepaste hash wel een rekenintensieve opdracht wordt. Op die manier wordt ook het bovenstaande probleem opgelost.
 
 \begin{figure}[H]
 	\centering
@@ -239,15 +239,15 @@ Een laatste essentieel principe bestaat eruit om bij elk blok een extra speciaal
 De laatste sleutel bestaat eruit om een extra stukje data toe te voegen aan elk blok genaamd de ``\textit{Proof of Work}''.
 Afhankelijk van de inhoud van die \textit{Proof of Work}, zal het blok uiteraard veranderen, en als gevolg ook de hash van dat blok~\autocite{Nakamoto2008}. Met andere woorden: door dit stukje data te tweaken, wijzigt men de hash die nodig is om te verwijzen naar dat blok.
 
-Het opzet is om nu een extra vereiste op te leggen aan die hashverwijzingen, zodat het tijdrovend wordt om die PoW te produceren. Nakamoto vond een dergelijke vereiste, die desondanks eenvoudig is om te verifiëren: de hash moet beginnen met een voorgedefiniëerd aantal nul-bits. Een blok zal pas als geldig beschouwd worden, wanneer de eerste \textit{x} bits allemaal de waarde nul hebben. 
+Het opzet is om nu een extra vereiste op te leggen aan die hashverwijzingen, zodat het tijdrovend wordt om die \textit{PoW} te produceren. Nakamoto vond een dergelijke vereiste, die desondanks eenvoudig is om te verifiëren: de hash moet beginnen met een voorgedefiniëerd aantal nul-bits. Een blok zal pas als geldig beschouwd worden, wanneer de eerste \textit{x} bits allemaal de waarde nul hebben. 
 
 \begin{center}
 	\begin{tikzpicture}[
 		roundnode/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=7mm},
-		squarednode/.style={rectangle, draw=blue!60, fill=blue!5, very thick, minimum size=5mm},
+		squarednode/.style={rectangle, draw={rgb,255:red,0;green,147;blue,208}, fill={rgb,255:red,102;green,190;blue,227}, fill opacity=0.1, text opacity=1, very thick, minimum size=5mm},
 		]
 		%Nodes
-		\node[squarednode,fill=none, align=center]  (blok-1)        					    {blok-1\\\textbf{incl. POW}};
+		\node[squarednode,fill=none, align=center]  (blok-1)        					    {blok-1\\\textbf{incl. \textit{PoW}}};
 		\node[draw=none,fill=none]    (input)         [below=of blok-1]       {011001111010...111};
 		\node[draw=none,fill=none]    (output-length) [below=of input, yshift=25]		{\textit{n} bits};
 		\node[squarednode]            (sha256) 		  [right=of input]       {SHA256()};
@@ -267,7 +267,7 @@ Het opzet is om nu een extra vereiste op te leggen aan die hashverwijzingen, zod
 	\end{tikzpicture}
 \end{center}
 
-Om tot een geldig blok te komen, zal dus telkens een PoW-waarde gezocht moeten worden, die de hash van dat blok laat starten met de nodige nulbits. Aangezien het hier over een cryptografische hashfunctie gaat, valt die \textit{Proof of Work} niet zomaar te voorspellen~\autocite{Mansfield2018}. Er zit niets anders op dan herhaaldelijk willekeurige waarden uit te proberen, tot er toevallig een geldige hashwaarde uit voortkomt.
+Om tot een geldig blok te komen, zal dus telkens een \textit{PoW}-waarde gezocht moeten worden, die de hash van dat blok laat starten met de nodige nulbits. Aangezien het hier over een cryptografische hashfunctie gaat, valt die \textit{Proof of Work} niet zomaar te voorspellen~\autocite{Mansfield2018}. Er zit niets anders op dan herhaaldelijk willekeurige waarden uit te proberen, tot er toevallig een geldige hashwaarde uit voortkomt.
 
 \begin{flushright}
 	\textit{{\small ``The proof-of-work involves scanning for a value that when hashed, such as with SHA-256, the hash begins with a number of zero bits. The average work required is exponential in the number of zero bits required and can be verified by executing a single hash.''}}
@@ -277,24 +277,24 @@ Om tot een geldig blok te komen, zal dus telkens een PoW-waarde gezocht moeten w
 
 Onderstaand voorbeeld illustreert hoe de kettingreactie bij het wijzigen van een blok er nu uitziet:
 
-\begin{tcolorbox}[title=Voorbeeld]	
+\begin{tcolorbox}[title=\textbf{Voorbeeld}, colframe={rgb,255:red,0;green,147;blue,208}, colback={rgb,255:red,247;green,252;blue,254} ]	
 	\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0, font=\small}, align=left, node distance=.5]
 		
 		%Nodes
 		\node[draw=none,fill=none] (11)        					    {\textbf{Stel: }};
 		\node[draw=none,fill=none] (12) [right=of 11, xshift=-15] {Er wordt een wijziging aangebracht aan blok-1.};
 		\node[draw=none,fill=none] (13) [below=of 12.west, anchor=west, xshift=23] {De cryptohash van blok-1 verandert naar een ongeldige waarde.};
-		\node[draw=none,fill=none] (14) [below=of 13.west, anchor=west, xshift=23] {Er moet opnieuw een PoW gezocht worden voor blok-1.};
+		\node[draw=none,fill=none] (14) [below=of 13.west, anchor=west, xshift=23] {Er moet opnieuw een \textit{PoW} gezocht worden voor blok-1.};
 		\node[draw=none,fill=none] (15) [below=of 14.west, anchor=west, xshift=23] {De cryptohash van blok-1 verandert naar een geldige waarde.};
-		\node[draw=none,fill=none] (21) [below=of 15.west, anchor=west, xshift=-92, yshift=-10]  {De prev\_block-verwijzing van blok-2 naar blok-1 moet geüpdatet worden.};
+		\node[draw=none,fill=none] (21) [below=of 15.west, anchor=west, xshift=-92, yshift=-10]  {De \verb*|prev_block|-verwijzing van blok-2 naar blok-1 moet geüpdatet worden.};
 		\node[draw=none,fill=none] (22) [below=of 21.west, anchor=west, xshift=23]  {M.a.w.: er wordt een wijziging aangebracht aan blok-2.};
 		\node[draw=none,fill=none] (23) [below=of 22.west, anchor=west, xshift=23]  {De cyptohash van blok-2 verandert naar een ongeldige waarde.};
-		\node[draw=none,fill=none] (24) [below=of 23.west, anchor=west, xshift=23] {Er moet opnieuw een PoW gezocht worden voor blok-2.};
+		\node[draw=none,fill=none] (24) [below=of 23.west, anchor=west, xshift=23] {Er moet opnieuw een \textit{PoW} gezocht worden voor blok-2.};
 		\node[draw=none,fill=none] (25) [below=of 24.west, anchor=west, xshift=23] {De cryptohash van blok-2 verandert naar een geldige waarde.};
-		\node[draw=none,fill=none] (31) [below=of 25.west, anchor=west, xshift=-92, yshift=-10]  {De prev\_block-verwijzing van blok-3 naar blok-2 moet geüpdatet worden.};
+		\node[draw=none,fill=none] (31) [below=of 25.west, anchor=west, xshift=-92, yshift=-10]  {De \verb*|prev_block|-verwijzing van blok-3 naar blok-2 moet geüpdatet worden.};
 		\node[draw=none,fill=none] (32) [below=of 31.west, anchor=west, xshift=23]  {M.a.w.: er wordt een wijziging aangebracht aan blok-3.};
 		\node[draw=none,fill=none] (33) [below=of 32.west, anchor=west, xshift=23]  {De cyptohash van blok-3 verandert  naar een ongeldige waarde.};
-		\node[draw=none,fill=none] (34) [below=of 33.west, anchor=west, xshift=23] {Er moet opnieuw een PoW gezocht worden voor blok-3.};
+		\node[draw=none,fill=none] (34) [below=of 33.west, anchor=west, xshift=23] {Er moet opnieuw een \textit{PoW} gezocht worden voor blok-3.};
 		\node[draw=none,fill=none] (35) [below=of 34.west, anchor=west, xshift=23] {De cryptohash van blok-3 verandert naar een geldige waarde.};
 		\node[draw=none,fill=none] (41) [below=of 35.west, anchor=west, xshift=-92, yshift=-10]  {...};
 		
@@ -317,7 +317,7 @@ Onderstaand voorbeeld illustreert hoe de kettingreactie bij het wijzigen van een
 \end{tcolorbox}
 
 
-Een wijziging aan een blok zorgt er dus nog steeds voor dat alle daaropvolgende hashes herevalueerd moeten worden. Door de toevoeging van de PoW is die herevaluatie nu ook een rekenintesieve opdracht geworden. Om een verwijzing te herstellen moet namelijk steeds opnieuw een geldige hashwaarde gevonden worden. Om die te vinden moet gescand worden naar een gepaste PoW-waarde.
+Een wijziging aan een blok zorgt er dus nog steeds voor dat alle daaropvolgende hashes opnieuw geëvalueerd moeten worden. Door de toevoeging van de \textit{PoW} is die herevaluatie nu ook een rekenintensieve opdracht geworden. Om een verwijzing te herstellen moet namelijk steeds opnieuw een geldige hashwaarde gevonden worden. Om die te vinden moet gescand worden naar een gepaste \textit{PoW}-waarde.
 
 \begin{figure}[H]
 	\centering
@@ -340,7 +340,7 @@ Er bestaat geen centrale authoriteit over de \textit{ledger} die wordt bijgehoud
 \subsection{Peer-to-peer network}
 \label{sub:peer-to-peer-network}
 
-In het netwerk is elke knoop in staat om overdrachten van transacties en blokken te starten en te beëindigen. Dat maakt het een peer-to-peernetwerk.~\autocite{Davidson2016} Hierin worden voortdurend volgende stappen doorlopen~\autocite{Nakamoto2008}:
+In het netwerk is elke knoop in staat om overdrachten van transacties en blokken te starten en te beëindigen. Dat maakt het een peer-to-peernetwerk~\autocite{Davidson2016}. Hierin worden voortdurend volgende stappen doorlopen~\autocite{Nakamoto2008}:
 
 \begin{enumerate}
 	\item Nieuwe transacties worden naar alle knopen van het netwerk \textit{gebroadcast}.
@@ -359,7 +359,7 @@ Knopen zullen vervolgens altijd de langste keten van blokken beschouwen als de c
 \subsection{Incorruptibility}
 \label{sub:incorruptibility}
 
-Het is belangrijk om erop te wijzen dat het in principe niet onmogelijk om een blockchain aan te passen. Het is wel nagenoeg onmogelijk om als minderheid de rest van het netwerk te overtuigen dat die versie van de \textit{ledger} de correcte is. Daarvoor zou men namelijk de langste blokketen moeten produceren. Dat houdt in dat er voortdurend naar de \textit{Proof of Work} van nieuwe blokken moet gezocht worden. In die - rekenintensieve - opdracht, zal de ``bedriegende'' minderheid uiteindelijk altijd het onderspit moeten delven voor de ``eerlijke'' meerderheid. Daarom verkiest men het soms om een blockchain als \textit{incorruptible} te beschrijven, in plaats van \textit{immutable}~\autocite{Salem2008}.
+Het is belangrijk om erop te wijzen dat het in principe niet onmogelijk is om een blockchain aan te passen. Het is wel nagenoeg onmogelijk om als minderheid de rest van het netwerk te overtuigen dat die versie van de \textit{ledger} de correcte is. Daarvoor zou men namelijk de langste blokketen moeten produceren. Dat houdt in dat er voortdurend naar de \textit{Proof of Work} van nieuwe blokken moet gezocht worden. In die --rekenintensieve-- opdracht, zal de ``bedriegende'' minderheid uiteindelijk altijd het onderspit moeten delven voor de ``eerlijke'' meerderheid. Daarom verkiest men het soms om een blockchain als \textit{incorruptible} te beschrijven, in plaats van \textit{immutable}~\autocite{Salem2008}.
 
 Ook bij deze \textit{incorruptibility} valt echter een kanttekening te maken. Het syteem is maar veilig, voor zolang de eerlijke knopen gezamenlijk over meer CPU-kracht beschikken dan eender welke groep aanvallende knopen~\autocite{Nakamoto2008}. Indien de aanvallende knopen samen het gros van de CPU-kracht beheersen, kunnen deze wel de blockchain trachten te corrumperen\footnote{Dergelijke aanvallen hebben al plaatsgevonden, voornamelijk bij kleinschalige \textit{cryptomunten}. Ze werden dan het slachtoffer van wat men een \textit{51\% attack} noemt. Om dit te verhinderen werden al protocollen bedacht die buiten de scope van dit onderzoek vallen.}~\autocite{Anita2019}.
 

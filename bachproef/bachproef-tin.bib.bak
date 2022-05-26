@@ -23,7 +23,7 @@
   institution = {Institute for Computing and Information Sciences Radboud University Nijmegen},
   title       = {Distributed Double Spending Prevention},
   type        = {Paper},
-  url         = {https://arxiv.org/abs/0802.0832v1},
+  doi         = {10.48550/arXiv.0802.0832},
 }
 
 @Report{Salem2008,
@@ -143,11 +143,79 @@
   type        = {Report},
 }
 
-@WWW{,
+@WWW{Gartner2022,
   author = {Gartner},
   date   = {2022},
+  editor = {Gartner},
   title  = {Blockchain Platforms Reviews and Ratings},
   url    = {https://www.gartner.com/reviews/market/blockchain-platforms},
+}
+
+@WWW{Sterk2021,
+  author = {Jim Sterk},
+  date   = {2021-11-30},
+  editor = {Jim Sterk},
+  title  = {Visma | yuki maakt als eerste bedrijf in Europa factuurverwerking veiliger met blockchaintechnologie},
+  url    = {https://www.yuki.nl/nl/nft-invoicing/},
+}
+
+@Misc{Verbeiren2020,
+  author    = {Eric Verbeiren and Joanna Chaltin},
+  date      = {2020-05-23},
+  title     = {Lesnota Duurzaam Management - Marketing, verkoop en service},
+  publisher = {HOGENT},
+}
+
+@Misc{Antjon2021,
+  author       = {Tom Antjon and Guy Dekoning and Wim De Bruyn and Marc Asselberg and Anneleen Bekkens},
+  date         = {2021-05-04},
+  title        = {Lesnota IT2Business - ERP Inleiding},
+  organization = {HoGent},
+  publisher    = {HoGent},
+}
+
+@Article{Shehab2004,
+  author       = {E.M Shehab and M.W. Sharp and L. Supramaniam and T.A. Spedding},
+  date         = {2004-08},
+  journaltitle = {Business Process Management Journal},
+  title        = {Enterprise resource planning: An integrative review},
+  doi          = {10.1108/14637150410548056},
+}
+
+@Article{Ford2007,
+  author = {Ian Ford},
+  date   = {2007-10-30},
+  title  = {E-Procurement - Electronic Data Integration Comes of Age},
+}
+
+@Article{Damsgaard2000,
+  author       = {J Damsgaard and D Truex},
+  date         = {2000-12-05},
+  journaltitle = {European Journal of Information Systems},
+  title        = {Binary trading relations and the limits of EDI standards: the Procrustean bed of standards},
+  doi          = {10.1057/palgrave.ejis.3000368},
+}
+
+@Article{Huber2020,
+  author       = {Tobias A. Huber and Didier Sornette},
+  date         = {2020-05-11},
+  journaltitle = {Journal of Economic Issues},
+  title        = {Boom, Bust, and Bitcoin:Bitcoin-Bubbles As Innovation Accelerators},
+  doi          = {10.48550/arXiv.2005.06464},
+}
+
+@Report{MNP2021,
+  author      = {MNP},
+  date        = {2021-08-25},
+  institution = {MNP},
+  title       = {The Original Bitcoin Protocol: What is it and why does it matter?},
+  type        = {Whitepaper},
+}
+
+@Article{,
+  author = {John Bohannon},
+  title  = {Why criminals can't hide behind Bitcoin},
+  doi    = {10.1126/science.aaf4167},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
