@@ -11,7 +11,7 @@ Dit hoofdstuk is het resultaat van een literatuurstudie, toegespitst op de eerst
 \end{center}
 Vertrekkende vanuit het \textit{double-spendingprobleem}, wordt geïllustreerd dat het delen van een grootboek \textit{of ledger} onvermijdelijk voor vertrouwenskwesties zorgt. Dit issue werd voor geruime tijd enkel vanuit een gecentraliseerd systeem benaderd. Met het verlangen naar de eerste \textit{cryptocurrencies} ontstond de nood aan een gedecentraliseerde benadering. Een blockchain vormde de oplossing voor de problemen die daarbij kwamen opdagen.
 
-Volgende secties werden opgebouwd met als doel een inzicht te geven in de structuur van een blockchain en hoe deze tot stand kwam. Daarom wordt vertrokken vanuit een veralgemeende probleemstelling. Door deze \textit{case} stelselmatig aan te vullen met enkele basisprincipes komen we uiteinlijk tot een oplossing onder de vorm van een blockchain. Voor de uitwerking hiervan werd de implementatie van de eerste blockchain, zoals bedacht door Nakamoto, gebruikt als boegbeeld. Op die manier toont dit hoofdstuk hoe een blockchain aan zijn eigenschappen komt. Wie deze in het achterhoofd houdt, zal met een gefundeerd begrip de volgende deelvragen kunnen aanvatten.
+Volgende secties werden opgebouwd met als doel een inzicht te geven in de structuur van een blockchain en hoe deze tot stand kwam. Daarom wordt vertrokken vanuit een veralgemeende probleemstelling. Door deze case stelselmatig aan te vullen met enkele basisprincipes komen we uiteinlijk tot een oplossing onder de vorm van een blockchain. Voor de uitwerking hiervan werd de implementatie van de eerste blockchain, zoals bedacht door Nakamoto, gebruikt als boegbeeld. Op die manier toont dit hoofdstuk hoe een blockchain aan zijn eigenschappen komt. Wie deze in het achterhoofd houdt, zal met een gefundeerd begrip de volgende deelvragen kunnen aanvatten.
 
 
 \section{Gedeelde ledgers}
@@ -55,7 +55,7 @@ In het boek ``Blockchain: Blueprint for a New Economy'' wordt blockchain-technol
 	\item ...
 \end{itemize}
 
-Ook al deze zaken horen uiteraard onvervalsbaar te zijn. Door het begrip transactie ruimer te bekijken, kan \textit{double-spending} vertaald worden naar veralgemeende probleemstelling. Dit is zinvol, aangezien de \textit{use cases} voor dit onderzoek niet te vinden zijn in Blockchain 1.0, maar starten bij Blockchain 2.0.
+Ook al deze zaken horen uiteraard onvervalsbaar te zijn. Door het begrip transactie ruimer te bekijken, kan \textit{double-spending} vertaald worden naar een veralgemeende probleemstelling. Dit is zinvol, aangezien de \textit{use cases} voor dit onderzoek niet te vinden zijn in Blockchain 1.0, maar starten bij Blockchain 2.0.
 
 
 \subsection{Probleemstelling}
@@ -192,10 +192,10 @@ Het is belangrijk om erop te wijzen dat zelfs de kleinste wijziging aan de input
 		\node[draw=none,fill=none] (13) [below=of 12.west, anchor=west, xshift=23] {De cryptohash van blok-1 verandert.};
 		\node[draw=none,fill=none] (21) [below=of 13.west, anchor=west, xshift=-46, yshift=-10]  {De \verb*|prev_block|-verwijzing van blok-2 naar blok-1 moet geüpdatet worden.};
 		\node[draw=none,fill=none] (22) [below=of 21.west, anchor=west, xshift=23]  {M.a.w.: er wordt een wijziging aangebracht aan blok-2.};
-		\node[draw=none,fill=none] (23) [below=of 22.west, anchor=west, xshift=23]  {De cyptohash van blok-2 verandert.};
+		\node[draw=none,fill=none] (23) [below=of 22.west, anchor=west, xshift=23]  {De cryptohash van blok-2 verandert.};
 		\node[draw=none,fill=none] (31) [below=of 23.west, anchor=west, xshift=-46, yshift=-10]  {De \verb*|prev_block|-verwijzing van blok-3 naar blok-2 moet geüpdatet worden.};
 		\node[draw=none,fill=none] (32) [below=of 31.west, anchor=west, xshift=23]  {M.a.w.: er wordt een wijziging aangebracht aan blok-3.};
-		\node[draw=none,fill=none] (33) [below=of 32.west, anchor=west, xshift=23]  {De cyptohash van blok-3 wordt opnieuw berekend};
+		\node[draw=none,fill=none] (33) [below=of 32.west, anchor=west, xshift=23]  {De cryptohash van blok-3 wordt opnieuw berekend};
 		\node[draw=none,fill=none] (41) [below=of 33.west, anchor=west, xshift=-46, yshift=-10]  {...};
 		
 		%Lines
@@ -288,12 +288,12 @@ Onderstaand voorbeeld illustreert hoe de kettingreactie bij het wijzigen van een
 		\node[draw=none,fill=none] (15) [below=of 14.west, anchor=west, xshift=23] {De cryptohash van blok-1 verandert naar een geldige waarde.};
 		\node[draw=none,fill=none] (21) [below=of 15.west, anchor=west, xshift=-92, yshift=-10]  {De \verb*|prev_block|-verwijzing van blok-2 naar blok-1 moet geüpdatet worden.};
 		\node[draw=none,fill=none] (22) [below=of 21.west, anchor=west, xshift=23]  {M.a.w.: er wordt een wijziging aangebracht aan blok-2.};
-		\node[draw=none,fill=none] (23) [below=of 22.west, anchor=west, xshift=23]  {De cyptohash van blok-2 verandert naar een ongeldige waarde.};
+		\node[draw=none,fill=none] (23) [below=of 22.west, anchor=west, xshift=23]  {De cryptohash van blok-2 verandert naar een ongeldige waarde.};
 		\node[draw=none,fill=none] (24) [below=of 23.west, anchor=west, xshift=23] {Er moet opnieuw een \textit{PoW} gezocht worden voor blok-2.};
 		\node[draw=none,fill=none] (25) [below=of 24.west, anchor=west, xshift=23] {De cryptohash van blok-2 verandert naar een geldige waarde.};
 		\node[draw=none,fill=none] (31) [below=of 25.west, anchor=west, xshift=-92, yshift=-10]  {De \verb*|prev_block|-verwijzing van blok-3 naar blok-2 moet geüpdatet worden.};
 		\node[draw=none,fill=none] (32) [below=of 31.west, anchor=west, xshift=23]  {M.a.w.: er wordt een wijziging aangebracht aan blok-3.};
-		\node[draw=none,fill=none] (33) [below=of 32.west, anchor=west, xshift=23]  {De cyptohash van blok-3 verandert  naar een ongeldige waarde.};
+		\node[draw=none,fill=none] (33) [below=of 32.west, anchor=west, xshift=23]  {De cryptohash van blok-3 verandert  naar een ongeldige waarde.};
 		\node[draw=none,fill=none] (34) [below=of 33.west, anchor=west, xshift=23] {Er moet opnieuw een \textit{PoW} gezocht worden voor blok-3.};
 		\node[draw=none,fill=none] (35) [below=of 34.west, anchor=west, xshift=23] {De cryptohash van blok-3 verandert naar een geldige waarde.};
 		\node[draw=none,fill=none] (41) [below=of 35.west, anchor=west, xshift=-92, yshift=-10]  {...};
